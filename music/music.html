@@ -43,42 +43,41 @@
 
         
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center" style="background-image: url(https://images.unsplash.com/photo-1567401747741-cd21b3b251f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); background-size: cover; background-position: center;">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Music</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-music"></i></div>
-                    <div class="divider-custom-line"></div>
+        <header>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(https://drive.google.com/uc?id=1gv9CMKvf0WxTc8GVoLv6KwNs5yvqIijl); background-size: cover; background-position: center;">
+                  <div class="carousel-caption" onclick="location.href='#guitarCourseSection'">
+                    <h5>Learn guitar today</h5>
+                    <p>Materials for students learning guitar.</p>
+                  </div>
                 </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-5">
-                    <a class="nav-link" href="#guitarCourseSection">Guitar Course</a>
-                    <a class="nav-link" href="#compositionsSection">Compositions</a>
-                    <a class="nav-link" href="#aboutSection">About</a>
-                </p>
-
-                <!-- <div class="container padding">
-                    <div class="row justify-content-center">
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mb-5">
-                            <div>
-                                <img class="img-fluid" src="img/fretboard-logo.png"/>
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mb-5">
-                            <div>
-                                <img class="img-fluid" src="img/fretboard-logo.png"/>
-                            </div>
-                        </div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 mb-5">
-                            <div>
-                                <img class="img-fluid" src="img/fretboard-logo.png"/>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="carousel-item" style="background-image: url(https://cdn-www.avid.com/-/media/avid/images/resource-center/images/2021-01/building-a-home-studio.jpg?h=893&iar=0&mw=1600&w=1600&hash=104AEFC05E8DD4E9B1ED18535E5C5529); background-size: cover; background-position: center;">
+                  <div class="carousel-caption" onclick="location.href='#compositionsSection'">
+                    <h5>Composition</h5>
+                    <p>Check out electronic musics I made under my artist name, Chill Wind.</p>
+                  </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(https://drive.google.com/uc?id=1BqLxqCkQkTHyiUQUxMn06TG8VUVxe3U3); background-size: cover; background-position: center;">
+                  <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                    <h5>About me</h5>
+                    <p>Discover the relation between the music and me.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
         </header>
 
@@ -119,7 +118,7 @@
                         <div class="row justify-content-center">
                             <!-- Guitar Course Item 1-->
                             <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                                <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#introductionCourseBefore" onclick="window.open('/assets/pdfjs-2.12.313-dist/web/viewer.html?file=/music/pdf/beginner/introduction.pdf');return false;">
+                                <div class="portfolio-item mx-auto" onclick="window.open('/assets/pdfjs-2.12.313-dist/web/viewer.html?file=/music/pdf/beginner/introduction.pdf');return false;">
                                     <div class="image-text">
                                         <img class="img-fluid" src="img/logo/beginner/introduction-logo.png"/>
                                     </div>
@@ -356,7 +355,14 @@
                                 <!-- Guitar Course Item 7-->
                                 <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
                                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                        <img class="img-fluid" src="img/logo/intermediate/chromaticism-logo.png"/>
+                                        <img class="img-fluid" src="img/logo/extra/chromaticism-logo.png"/>
+                                    </div>
+                                </div>
+
+                                 <!-- Guitar Course Item 7-->
+                                 <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
+                                        <img class="img-fluid" src="img/logo/extra/melodicminorscale-logo.png"/>
                                     </div>
                                 </div>
                             </div>

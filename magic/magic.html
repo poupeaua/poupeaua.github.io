@@ -39,24 +39,47 @@
         </nav>
 
 
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center" style="background: url(https://images.unsplash.com/photo-1506362802973-bd1717de901c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2FyZCUyMG1hZ2ljfGVufDB8fDB8fA%3D%3D&w=1000&q=80); background-size: cover; background-position: center;">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Magic</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-hat-wizard"></i></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Learn Card Tricks today</p>
+       <!-- Masthead-->
+       <header>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(https://drive.google.com/uc?id=1DFQagk68BA9N92Wio84Dvv3Ogbo4WNHy); background-size: cover; background-position: center;">
+              <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                <h5>Learn card tricks today</h5>
+                <p>Just take a look at the beautiful La Tour Sans Venin card.</p>
+              </div>
             </div>
-        </header>
+            <div class="carousel-item" style="background-image: url(https://drive.google.com/uc?id=1EMnLOX7NEVIphR3dBXFbr1WRvdQSnqVg); background-size: cover; background-position: center;">
+              <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                <h5>Card Artist Pedagogy</h5>
+                <p>Teaching card magic</p>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url(https://drive.google.com/uc?id=1viI4VUJJwrTyyA3JkwpNdqAXvdHNBDEE); background-size: cover; background-position: center;">
+              <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                <h5>About me</h5>
+                <p>Discover how I became a card artist.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </header>
 
         <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
+        <section class="page-section bg-primary text-white mb-0" id="aboutSection">
             <div class="container">
                 <!-- About Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
