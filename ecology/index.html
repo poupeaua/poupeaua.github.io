@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../assets/css/styles.css" rel="stylesheet" />
+        <link href="../assets/css/styles.css" rel="stylesheet"/>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -39,20 +39,257 @@
 
 
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center" style="background: url(https://www.ncl.ac.uk/mediav8/natural-and-environmental-sciences/images/Ecology-Header.jpg); background-size: cover; background-position: center;">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Ecology</h1>
+      <header>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(https://www.ncl.ac.uk/mediav8/natural-and-environmental-sciences/images/Ecology-Header.jpg); background-size: cover; background-position: center;">
+              <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                <h5>This changes everything</h5>
+                <p>Just take a look at the beautiful La Tour Sans Venin card.</p>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url(https://www.ncl.ac.uk/mediav8/natural-and-environmental-sciences/images/Ecology-Header.jpg); background-size: cover; background-position: center;">
+              <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                <h5>Card Artist Pedagogy</h5>
+                <p>Teaching card magic</p>
+              </div>
+            </div>
+            <div class="carousel-item" style="background-image: url(https://www.ncl.ac.uk/mediav8/natural-and-environmental-sciences/images/Ecology-Header.jpg); background-size: cover; background-position: center;">
+              <div class="carousel-caption" onclick="location.href='#aboutSection'">
+                <h5>About me</h5>
+                <p>Discover how I became a card artist.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          </div>
+      </header>
+
+        <!-- Timeline Section-->
+        <section class="page-section bg-white text-secondary mb-0" id="timeline">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase">Timelines</h2>
                 <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
+                <div class="divider-custom">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-hourglass"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Study - Share - Act</p>
+
+                <p>
+                    <a class="btn btn-primary btn-outline-dark" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      Link with href
+                    </a>
+                    <button class="btn btn-primary btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      Button with data-target
+                    </button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div>
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                </div>
+                
+                <ul class="timeline">
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1950</p>
+                          <p class="timeline-event-title">World Meteorological Organization</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1972</p>
+                          <p class="timeline-event-title">The Limits to Growth</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1974</p>
+                          <p class="timeline-event-title">International Energy Agency creation</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1987</p>
+                          <p class="timeline-event-title">Bruntland Report</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1988</p>
+                          <p class="timeline-event-title">Creation of IPCC</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        
+                        </div>
+                      </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1992</p>
+                          <p class="timeline-event-title">Earth Summit</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1995</p>
+                          <p class="timeline-event-title">1st Conference Of Parties</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">1997</p>
+                          <p class="timeline-event-title">Kyoto Protocol</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">2006</p>
+                          <p class="timeline-event-title">Peak of Conventional Crude Oil</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                      <label class="timeline-event-icon"></label>
+                      <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">2009</p>
+                        <p class="timeline-event-title">Stern Report</p>
+                        <div>
+                            <h3>Freelancer</h3>
+                            <h4>Designer und Autor</h4>
+                            <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                        </div>
+                      
+                      </div>
+                    </li>
+                    <li class="timeline-event">
+                      <label class="timeline-event-icon"></label>
+                      <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">2012</p>
+                        <p class="timeline-event-title">World Bank Report</p>
+                        <div>
+                            <h3>Freelancer</h3>
+                            <h4>Designer und Autor</h4>
+                            <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">2015</p>
+                          <p class="timeline-event-title">Paris Agreement</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">Oct. 2018</p>
+                          <p class="timeline-event-title">IPCC Special Report on Global Warming of 1.5°C</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">May 2018</p>
+                          <p class="timeline-event-title">ONU "Existencial Threat to Humanity"</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="timeline-event">
+                        <label class="timeline-event-icon"></label>
+                        <div class="timeline-event-copy">
+                          <p class="timeline-event-thumbnail">2022</p>
+                          <p class="timeline-event-title">Now</p>
+                          <div>
+                              <h3>Freelancer</h3>
+                              <h4>Designer und Autor</h4>
+                              <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
+                          </div>
+                        </div>
+                    </li>
+                  </ul>
             </div>
-        </header>
+        </section>
+
 
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="about">
