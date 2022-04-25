@@ -9,7 +9,7 @@
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -112,25 +112,16 @@ body {
 }
 
 .timeline-event:hover .timeline-event-icon {
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   background-color: #a83279;
 }
 
 .timeline-event:hover .timeline-event-title {
   color: white;
-  -moz-box-shadow: inset 40em 0 0 0 #a83279;
-  -webkit-box-shadow: inset 40em 0 0 0 #a83279;
   box-shadow: inset 40em 0 0 0 #a83279;
-  transition: color 0.25s;
-  transition: box-shadow 1s;
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-  -moz-box-shadow: inset 40em 0 0 0 #a83279;
-  -webkit-box-shadow: inset 40em 0 0 0 #a83279;
   box-shadow: inset 40em 0 0 0 #a83279;
 }
 
@@ -178,13 +169,7 @@ body {
 }
 
 .timeline-event-icon {
-  -moz-transition: -moz-transform 0.2s ease-in;
-  -o-transition: -o-transform 0.2s ease-in;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: rgba(var(--bs-secondary-rgb));
   outline: 10px solid white;
@@ -198,40 +183,27 @@ body {
 }
 
 .timeline-event-thumbnail {
-  -moz-transition: box-shadow 0.5s ease-in 0.1s;
-  -o-transition: box-shadow 0.5s ease-in 0.1s;
-  -webkit-transition: box-shadow 0.5s ease-in;
-  -webkit-transition-delay: 0.1s;
-  transition: box-shadow 0.5s ease-in 0.1s;
+  /* transition: box-shadow 0.5s ease-in 0.1s; */
   color: white;
   font-size: 0.75em;
   background-color: rgba(var(--bs-secondary-rgb));
-  -moz-box-shadow: inset 0 0 0 0em #ef795a;
-  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
   box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;
   margin-bottom: 1.2em;
   padding: 0.25em 1em 0.2em 1em;
-  transition-delay: 0.2s;
 }
 
 .timeline-event-title {
-  -moz-transition: box-shadow 0.5s ease-in 0.1s;
-  -o-transition: box-shadow 0.5s ease-in 0.1s;
-  -webkit-transition: box-shadow 0.5s ease-in;
-  -webkit-transition-delay: 0.1s;
-  transition: box-shadow 0.5s ease-in 0.1s;
+  /* transition: box-shadow 0.5s ease-in 0.1s;
+  box-shadow: inset 0 0 0 0em #ef795a; */
   color: rgba(var(--bs-secondary-rgb));
   font-size: 0.75em;
   background-color: white;
-  -moz-box-shadow: inset 0 0 0 0em #ef795a;
-  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
-  box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;
   position: absolute;
   margin-bottom: 1.2em;
   margin-left: 0.5em;
-  margin-top: 0.12em;
+  margin-top: 0.15em;
   padding: 0.25em 1em 0.2em 1em;
 }
 
@@ -4801,6 +4773,29 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+.card-columns .card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+} 
+
+@media (min-width:576px) {
+  .card-columns {
+    -webkit-column-count:4;
+    -moz-column-count:4;
+    column-count:4;
+    -webkit-column-gap:1.5rem;
+    -moz-column-gap:1.5rem;
+    column-gap:1.5rem;
+    orphans:1;
+    widows:1
+  }
+  .card-columns
+  .card {
+    display:inline-block;
+    width:100%
+  }
+}
+
 .card {
   position: relative;
   display: flex;
@@ -4811,7 +4806,17 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 0.125rem solid rgba(0, 0, 0, 0.125);
   border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
+
+.card:hover {
+  filter: grayscale(0);
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05);
+  box-shadow: 0rem 0rem 1.5rem 0.05rem rgb(0 0 0 / 90%);
+}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
