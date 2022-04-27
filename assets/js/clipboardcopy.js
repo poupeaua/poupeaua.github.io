@@ -4,10 +4,13 @@ function clipboardcopy() {
   
     /* Select the text field */
     copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  
+    copyText.contentEditable = true;
+    copyText.readOnly = true;
+    copyText.setSelectionRange(0, 999999);
+
      /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
+    // navigator.clipboard.writeText(copyText.value);
+    document.execCommand("copy")
   
     /* Alert the copied text */
     // alert("Copied the text: " + copyText.value);
