@@ -4790,6 +4790,23 @@ textarea.form-control-lg {
   margin-bottom: 1rem;
 } 
 
+@media (min-width:0px) {
+  .card-columns {
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
+    -webkit-column-gap:1.5rem;
+    -moz-column-gap:1.5rem;
+    column-gap:1.5rem;
+    orphans:1;
+    widows:1
+  }
+  .card-columns .card {
+    display:inline-block;
+    width:100%
+  }
+}
+
 @media (min-width:576px) {
   .card-columns {
     -webkit-column-count:4;
@@ -4801,8 +4818,7 @@ textarea.form-control-lg {
     orphans:1;
     widows:1
   }
-  .card-columns
-  .card {
+  .card-columns .card {
     display:inline-block;
     width:100%
   }
