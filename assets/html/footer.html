@@ -25,14 +25,11 @@
                 <h4 class="text-uppercase mb-4">Contact me</h4>
                 <!-- The text field -->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" value="alexandre.poupeau.contact@gmail.com" placeholder="My email address" aria-label="Recipient's username" aria-describedby="basic-addon2" id="myInput">
-                    <button class="btn btn-outline-light" onclick="clipboardcopy()">
-                        <i class="fas fa-clipboard"></i>
+                    <input readonly type="text" class="form-control" value="alexandre.poupeau.contact@gmail.com" placeholder="My email address" aria-label="Recipient's username" aria-describedby="basic-addon2" id="myInput">
+                    <button class="btn btn-outline-light" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="clipboardcopy()">
+                        <i class="fas fa-copy"></i>
                     </button>
-                </div>
-
-                <!-- The button used to copy the text -->
-                
+                </div>                
             </div>
         </div>
     </div>
@@ -42,4 +39,13 @@
     <div class="container"><small>Copyright © Alexandre Poupeau's Website 2022</small></div>
 </div>
 
+<!-- allow popover when clicking -->
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>
+
+<!-- allow copy to clipboard feature -->
 <script src="/assets/js/clipboardcopy.js"></script>
