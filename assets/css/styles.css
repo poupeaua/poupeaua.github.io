@@ -132,29 +132,18 @@ body {
 }
 
 .timeline-event-copy {
-  padding: 1em;
+  padding: 0em;
   top: -0.875em;
-  width: 15rem;
   display: block;
   white-space: normal;
   transition-delay: 0.5s;
   transition-property: width;
 }
 
-.timeline-event-copy:hover {
-  width: 100%;
-  white-space: normal;
-  transition-delay: 0s;
-}
-
 .timeline-event-copy div {
-  transition: 0.5s ease-in;
-  max-height: 0px;
-  overflow-y: scroll;
-}
-
-.timeline-event-copy:hover div {
+  transition: 0.5s ease-in-out;
   max-height: 500px;
+  overflow-y: scroll;
 }
 
 .timeline-event-copy h3 {
@@ -172,12 +161,10 @@ body {
 
 .timeline-event-copy img {
   width: 100%;
-  height: 100%;
 }
 
 .timeline-event-copy embed {
   width: 100%;
-  height: 100%;
 }
 
 
@@ -202,10 +189,10 @@ body {
 
 .timeline-event-thumbnail {
   /* transition: box-shadow 0.5s ease-in 0.1s; */
+  /* box-shadow: inset 0 0 0 0em #ef795a; */
   color: white;
   font-size: 0.75em;
   background-color: rgba(var(--bs-secondary-rgb));
-  box-shadow: inset 0 0 0 0em #ef795a;
   display: inline-block;
   margin-bottom: 2em;
   padding: 0.25em 1em 0.2em 1em;
