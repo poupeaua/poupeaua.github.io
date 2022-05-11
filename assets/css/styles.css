@@ -136,8 +136,6 @@ body {
   top: -0.875em;
   display: block;
   white-space: normal;
-  transition-delay: 0.5s;
-  transition-property: width;
 }
 
 .timeline-event-copy div {
