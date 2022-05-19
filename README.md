@@ -12,10 +12,6 @@ This Website is divided into sections :
 
 The objective here is to display some sources, content and knowledge about THE most important (and really the only thing that matters) in our era : ecology and environmental information.
 
-### Dev
-
-The objective in this page is to display information about my job, my resume and other professional related stuff.
-
 ### Magic
 
 As a card artist I would like to share content about this unknown but beautiful form of art.
@@ -27,3 +23,7 @@ As a musician, I wanted to share my share my compositions. Plus, as I give guita
 ### Painting
 
 From time to time I paint, so I wanted to be able to share my paintings with you.
+
+### Pro
+
+The objective in this page is to display information about my job, my resume and other professional related stuff.

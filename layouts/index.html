@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+<!-- Masthead-->
+<header class="masthead bg-secondary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="/img/photo-pro.jpeg" alt="avatar" />
+        <!-- Masthead Heading-->
+        <h1>{{ .Params.iLove }}</h1>
+        <h1 href="" class="text-info typewrite" data-period="2000" data-type={{ .Params.listLove }}>
+            <span class="wrap"></span>
+        </h1>
+    </div>
+</header>
+
+<!-- About Section-->
+<section class="page-section text-secondary mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "welcome.base" }}</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-handshake"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ms-auto"><p class="lead">{{ $.Param "welcome.content1" }}</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead">{{ $.Param "welcome.content2" }}</p></div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

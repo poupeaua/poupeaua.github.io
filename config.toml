@@ -1,0 +1,44 @@
+baseURL = 'http://localhost.1313/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+copyright = 'Everything is mine'
+defaultContentLanguage = 'en'
+publishDir = 'docs'
+
+[params]
+copyright = 'Copyright © Alexandre Poupeau Website 2022'
+email = "alexandre.poupeau.contact@gmail.com"
+siteName = 'A. Poupeau'
+city = 'Grenoble, 38000'
+country = 'FRANCE'
+[params.navigation]
+  help = 'Help'
+
+[languages]
+  [languages.en]
+    title = 'My blog'
+    url = "/"
+    contentDir = "content/en"
+    languageName = "English"
+    languageShort = "EN"
+    weight = 1
+    [languages.en.params]
+      linkedin = 'https://linkedin.com/whoever'
+  [languages.fr]
+    title = 'Mon blogue'
+    contentDir = "content/fr"
+    languageName = "Français"
+    languageShort = "FR"
+    weight = 2
+    [languages.fr.params]
+      linkedin = 'https://linkedin.com/fr/whoever'
+      [languages.fr.params.navigation]
+        help = 'Aide'
+  [languages.es]
+    title = 'mi blogua'
+    contentDir = "content/es"
+    languageName = "Español"
+    languageShort = "ES"
+    weight = 3
+
+disableKinds = ["taxonomy", "taxonomyTerm"]

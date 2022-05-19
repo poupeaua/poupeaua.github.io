@@ -1,0 +1,4 @@
+---
+Title: Magia
+type: "magic"
+---

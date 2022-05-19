@@ -1,0 +1,21 @@
+<div class="mr-auto nav-item dropdown me-2 d-inline-flex rounded">
+  <!-- <a class="nav-item px-2" style="text-decoration: none" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-fw fa-language me-1"></i>{{ .Language.LanguageName }}
+  </a> -->
+  <button class="btn btn-outline-light dropdown-toggle text-uppercase" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-fw fa-globe me-1"></i>{{ .Language }}
+  </button>
+  <div class="dropdown-menu">
+    {{ if .IsTranslated -}}
+    {{- range .Translations -}}
+    <a class="dropdown-item post-translation" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+    {{ end -}}
+    {{ else -}}
+    {{ range .Site.Languages -}}
+    {{ if ne $.Site.Language.Lang .Lang }}
+    <a rel="dropdown-item post-translation" href="{{ .Lang | relURL }}">{{ .LanguageName }}</a>
+    {{ end -}}
+    {{ end -}}
+    {{ end -}}
+  </div>
+</div>

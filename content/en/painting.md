@@ -1,0 +1,4 @@
+---
+Title: Painting
+type: "painting"
+---

@@ -1,0 +1,4 @@
+---
+Title: Pintura
+type: "painting"
+---

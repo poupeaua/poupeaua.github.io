@@ -6,12 +6,12 @@
     }
     
 .video-responsive iframe {
-left:0; 
-top:0; 
-height:100%;
-width:100%;
-position:absolute;
-border-radius: 0.5rem;
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+    border-radius: 0.5rem;
 }
 
 .video-magic {

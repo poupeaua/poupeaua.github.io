@@ -3692,7 +3692,7 @@ textarea.form-control-lg {
   border-color: #f8f9fa;
 }
 .btn-outline-light:hover {
-  color: #000;
+  color: rgba(var(--bs-secondary-rgb));
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -3700,7 +3700,7 @@ textarea.form-control-lg {
   box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
 }
 .btn-check:checked + .btn-outline-light, .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show {
-  color: #000;
+  color: rgba(var(--bs-secondary-rgb));
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
