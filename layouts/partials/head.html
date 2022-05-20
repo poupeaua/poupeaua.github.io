@@ -7,20 +7,16 @@
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
     <!-- Core JS-->
-    {{ $clipboardcopy := resources.Get "js/clipboardcopy.js" }}
-    {{ $typewriter := resources.Get "js/typewriter.js" }}
-    <script src="{{ $clipboardcopy.Permalink }}"></script>
-    <script src="{{ $typewriter.Permalink }}"></script>
+    <script src="../../js/clipboardcopy.js"></script>
+    <script src="../../js/typewriter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    {{ $custom := resources.Get "css/custom.css" }}
-    {{ $style := resources.Get "css/styles.css" }}
-    <link rel="stylesheet" href="{{ $custom.Permalink }}" /> 
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />     
+    <link rel="stylesheet" href="../../css/custom.css" /> 
+    <link rel="stylesheet" href="../../css/styles.css" />     
     <!-- Site Title -->
     <title>{{ .Site.Title }}</title>
 </head>

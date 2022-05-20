@@ -1,9 +1,10 @@
-baseURL = 'http://localhost.1313/'
+baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 copyright = 'Everything is mine'
 defaultContentLanguage = 'en'
 publishDir = 'docs'
+staticDir = 'static'
 
 [params]
 copyright = 'Copyright © Alexandre Poupeau Website 2022'
