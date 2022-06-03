@@ -34,7 +34,7 @@
             <p class="text-center"><i>"C'est d'âme qu'il faut changer, non de climat"</i> - Sénèque</p>
 
             <ul class="timeline" id="accordion">
-                {{ range (where .Site.Pages "Type" "timelineEvent").ByParam "Order" }}
+                {{ range $index, $element := (where .Site.Pages "Type" "timelineEvent").ByParam "Order" }}
                 <li class="timeline-event">
                     <label class="timeline-event-icon"></label>
                     <div class="timeline-event-copy">
@@ -73,213 +73,85 @@
 
             <p class="mb-5 text-center"><i>"It is no measure of health to be well adjusted to a profoundly sick society."</i> - Jiddu Krishnamurti</p>
 
+            <input name="input-custom-dropdown" class="bg-white rounded" placeholder="write some tags" value="">
+
             <div class="card-columns text-primary">
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/ipcc-report.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">IPCC reports</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Intergovernmental Panel on Climate Change (IPCC)</h6>
-                  <p class="card-text">The most important and reliable scientific source about climate change.</p>
-                  <a href="https://www.ipcc.ch/reports/" target="_blank" class="card-link">Reports link</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/thelimitstogrowth.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">The Limits to Growth</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Dennis Meadows, Donella Meadows and Jørgen Randers - 1972</h6>
-                  <p class="card-text">A classic and a must-read. New editions have been published in 1992, 2004 and 2012.</p>
-                  <a href="http://www.donellameadows.org/wp-content/userfiles/Limits-to-Growth-digital-scan-version.pdf" target="_blank" class="card-link">Online PDF (1992 edition)</a>
-                </div>
-              </div>                    
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/thischangeseverything.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">This changes everything</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Naomi Klein - 2014</h6>
-                  <p class="card-text">This is a must-read in order to understand the systemic causes and consequences in the Anthropocene</p>
-                  <a href="https://archive.org/details/pdfy-Skb-ch_k7psDm90Q/mode/2up" target="_blank" class="card-link">Online PDF</a>                        
-                </div>
-              </div>                    
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/donteventhinkaboutit.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Don't even think about it</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">George Marshall - 2014</h6>
-                  <p class="card-text">A psychological approach to the question : why don't we care about climate change ?</p>
-                  <a href="https://theclimatecenter.org/wp-content/uploads/2017/03/final_Dont-Even-Think-About-It-Notes.pdf" target="_blank" class="card-link">Book extracts</a>                        
-                </div>
-              </div>                     
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/discoveryglobalwarming.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">The Discovery of Global Warming</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Spencer R. Weart - 2003</h6>
-                  <p class="card-text">History about how Global Warming was discovered.</p>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/earthmasters.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Earthmasters</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Clive Hamilton - 2013</h6>
-                  <p class="card-text">Deconstruct the myth of geo-engineering solutions and explains how some people want to play god with the climate.</p>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/merchantsofdoubts.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Merchants of Doubt</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Naomi Oreskes & Erik M. Conway - 2015</h6>
-                  <p class="card-text">How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming.</p>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/gouvernerleclimat.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Gouverner le climat ?</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Stefan C. Aykut & Amy Dahan - 2014</h6>
-                  <p class="card-text">This is a great book that goes through the history of all the international conferences about climate change and shows how and why things have not evolved.</p>
-                </div>
-              </div>  
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/ornoir.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Or noir</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Matthieu Auzanneau - 2015</h6>
-                  <p class="card-text">An essay about oil history, from its discovery to its importance in today's civilization in all domains: industrial of course but also military, political and economical.</p>
-                </div>
-              </div> 
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/humaniteenperilvironsdebord.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">L'Humanité en Préril</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Fred Vargas - 2019</h6>
-                  <p class="card-text">Fred Vargas is mostly well-known for her crime novels however she wrote a transparent and really easy to read (even for neophytes) book about the systemic problems due to Anthropocene. The book is quite naive and its approach is sometimes confusing but it at least informs people about climate change, biodiversity destruction, energy and more.</p>
-                </div>
-              </div> 
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/dormeztranquillesjusquen2100.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Dormez tranquilles jusqu'en 2100: Et autres malentendus sur le climat et l'énergie</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Jean-Marc Jancovici - 2015</h6>
-                  <p class="card-text">A book har to read in my opinion as it goes in all directions, left and right, with a confusing structure. I would better recommend Jean-Marc Jancovici's conferences (available on Youtube for example): he is clearer orally.</p>
-                  <a href="https://jancovici.com/publications-et-co/livres/dormez-tranquilles-jusquen-2100/" target="_blank" class="card-link">Personal Website</a>       
-                  <a href="https://www.youtube.com/watch?v=M2wI25p_7GA" target="_blank" class="card-link">Conference</a>                 
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/penserladecroissance.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Penser la décroissance</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Agnès Sinaï - 2013</h6>
-                  <p class="card-text">A book written by different specialists where each has its own chapter. There are two books that follow after this one. You can find the links below.</p>
-                  <li><a href="https://www.google.fr/books/edition/Penser_la_d%C3%A9croissance/QYQ0DwAAQBAJ?hl=fr&gbpv=1&printsec=frontcover" target="_blank" class="card-link">Penser la décroissance</a></li>     
-                  <li><a class="card-link" target="_blank" href="https://www.google.fr/books/edition/Economie_de_l_apr%C3%A8s_croissance/56aOCgAAQBAJ?hl=fr&gbpv=1&printsec=frontcover">Economie de l'après croissance</a></li>
-                  <li><a class="card-link" target="_blank" href="https://books.google.ch/books?id=iQTNDgAAQBAJ&printsec=frontcover&hl=fr#v=onepage&q&f=false">Gouverner la décroissance</a></li>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/deuxdegres.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Deux degrés</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Edwin Zaccai - 2019</h6>
-                  <p class="card-text">Another book on the climate change subject: it does not provide more information if you are already informed. It nonetheless offers a different point of view about it.</p>
-                  <a href="https://www.google.fr/books/edition/Deux_degr%C3%A9s/94WWDwAAQBAJ?hl=fr&gbpv=1&printsec=frontcover" target="_blank" class="card-link">Book preview</a>                        
-                </div>
-              </div>  
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/devantleffondrement.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Devant l'effondrement</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Yves Cochet - 2019</h6>
-                  <p class="card-text">A hard-to-read book because of the conclusion it suggests : a collapse of our society probably in 2020 and certain before 2030.</p>
-                  <a href="https://bibliotheques.wallonie.be/doc_num.php?explnum_id=5048" target="_blank" class="card-link">Book preview</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/vivremieuxsocieteecolo.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Vivre mieux vers une société écologique</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Europe écologie les Verts - 2012</h6>
-                  <p class="card-text">In my opinion this book's content is a bit naive however it provides some good information about what the political party "Europe Ecologie les Verts" have in mind and what changes they want to operate.</p>
-                  <a href="https://www.eelv.fr/bienvivre/" target="_blank" class="card-link">EELV Website</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/whyclimatechangedoesnotscareusyet.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Why Climate Change does not scare us yet ?</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Center for Research on Environmental Decisions - 2006</h6>
-                  <p class="card-text">A psychological approach to answer the question : Why Climate Change does not scare us yet ?</p>
-                  <a href="https://www.researchgate.net/publication/226378293_Experience-Based_and_Description-Based_Perceptions_of_Long-Term_Risk_Why_Global_Warming_Does_Not_Scare_Us_Yet#read" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/areweonthebrinkofapronuncedglobalwarming.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Are we on the brink of a pronunced global warming ?</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Science - 1975</h6>
-                  <p class="card-text">An old Science report that predicted the temperature rise levels for years to come back in 1975. Its predictions are correct and it further explores what may go wrong in the case of a pronunced global warming.</p>
-                  <a href="https://news.climate.columbia.edu/files/2009/10/broeckerglobalwarming75.pdf" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/psychologyofclimatechangecommunication.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">The Psychology of Climate Change Communication</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Center for Research on Environmental Decisions - 2009</h6>
-                  <p class="card-text">A great psychological guide for anybody interested in enhancing its communication skills about climate change and more. </p>
-                  <a href="http://guide.cred.columbia.edu/pdfs/CREDguide_full-res.pdf" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/beworriedbeveryworried.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Be Worried, Be Very Worried</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Time Magazine - 2006</h6>
-                  <p class="card-text">Earth at the Tipping Point: Global Warming Heats Up</p>
-                  <a href="http://content.time.com/time/magazine/article/0,9171,1176980,00.html" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/approachingastateshiftinearthbiosphere.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Approaching a state shift in Earth's biosphere</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Nature - 2012</h6>
-                  <p class="card-text">Review evidence that the Global Ecosystem is approaching a planetary-scale critical transition as a result of human influence</p>
-                  <a href="https://www.researchgate.net/publication/235752538_Approaching_a_state_shift_in_Earth's_biosphere" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/planetaryboundaries.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Planetary Boundaries</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Science - 2015</h6>
-                  <p class="card-text">Guiding Human Development on a Changing Planet</p>
-                  <a href="https://www.researchgate.net/publication/270898819_'Planetary_Boundaries_Guiding_Human_Development_on_a_Changing_Planet'#read" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/trajectoriesearthsystem.webp" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Trajectories of the Earth System in the Anthropocene</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Proceedings of the National academy of Sciences - 2018</h6>
-                  <p class="card-text">We explore the risk that self-reinforcing feedbacks could push the Earth System toward a planetarythreshold that, if crossed, could prevent stabilization of the climate at intermediate temperature rises andcause continued warming on a“Hothouse Earth”pathway even as human emissions are reduced.</p>
-                  <a href="https://www.pnas.org/doi/epdf/10.1073/pnas.1810141115" target="_blank" class="card-link">Read report</a>                        
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="/img/ecology/biblio/agedeslowtech.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Age des low tech</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Philippe Bihouix - 2014</h6>
-                  <p class="card-text">A focus on the ressource part of the systemic concern in the Anthropocene in particular about metals and rare ressources used in our High Technologies.</p>
-                  <a href="https://www.google.fr/books/edition/L_%C3%82ge_des_low_tech_Vers_une_civilisatio/W5-jAwAAQBAJ?hl=fr&gbpv=1&printsec=frontcover" target="_blank" class="card-link">Book preview</a>                        
-                </div>
-              </div>           
-            </div>                    
-          </div>
+                {{ range $index, $element := (where .Site.Pages "Type" "book").ByParam "Order" }}
+                <li class="card biblio-element" id="biblio{{ $index }}">
+                  <img class="card-img-top" src="{{ .Params.img }}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ .Title }}</h5>
+                    {{ .Content }}                      
+                  </div>
+                  <div class="panel-footer">
+                    <span class="label label-primary hidden">All</span>
+                    {{ range .Params.Tags }}
+                      <span class="label label-default">{{ . }}</span>
+                    {{ end }}
+                  </div>
+                </li>
+                {{ end }}
+            </div>
+
+            <script>
+              var input = document.querySelector('input[name="input-custom-dropdown"]'),
+                // init Tagify script on the above inputs
+                tagify = new Tagify(input, {
+                  whitelist: ["systemic", "climate change", "psychology", , "politics", "energy", "oil", "metals"],
+                  maxTags: 10,
+                  dropdown: {
+                    maxItems: 20,           // <- mixumum allowed rendered suggestions
+                    classname: "tags-look", // <- custom classname for this dropdown, so it could be targeted
+                    enabled: 0,             // <- show suggestions on focus
+                    closeOnSelect: false    // <- do not hide the suggestions dropdown once an item has been selected
+                  }
+                });
+
+              input.addEventListener('change', onChange)
+
+              function onChange(tags){
+                var tagsVal = JSON.parse(tags.target.value);
+                var tagsArray = [];
+                  for (let item of tagsVal) {
+                    tagsArray.push(item.value);
+                  }
+                console.log("Array of tags :" + JSON.stringify(tagsArray));
+                // console.log(Array.isArray(tagsArray));
+
+                var biblio = document.getElementsByClassName("biblio-element");
+                var totalPanel = biblio.length;
+
+                for (var x = 0; x <= totalPanel; x++){
+                  var curBiblio = document.getElementById("biblio" + x);
+                  console.log(curBiblio);
+                  var curBiblioLabels = curBiblio.getElementsByClassName("label");
+                  // console.log(curBiblioLabels);
+
+                  // create an array of tags based on labels in element
+                  var curBiblioTags = [];
+                  for (let item of curBiblioLabels) {
+                    curBiblioTags.push(item.innerHTML);
+                  }
+                  console.log(curBiblioTags);
+                  
+                  // if current element got label identicated in tags display it
+                  var display = false;
+                  for (let item of curBiblioLabels) {
+                    if (tagsArray.includes(item.innerHTML)) {
+                      display = true;
+                      break;
+                    }
+                  }
+
+                  if(display){
+                    $("#biblio" + x ).hide();
+                    $("#biblio" + x ).fadeIn(5);
+                  } else {
+                    $("#biblio" + x ).hide();
+                  };
+                }
+              }
+            </script>
         </div>
     </section>
 
