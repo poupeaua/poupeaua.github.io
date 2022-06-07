@@ -44,6 +44,7 @@
   }
   
   .tags-look .tagify__dropdown__item:hover{
-    background: lightyellow;
-    border-color: gold;
+    color: white;
+    background: rgba(var(--bs-third-rgd));
+    border-color: rgba(var(--bs-third-rgd));
   }

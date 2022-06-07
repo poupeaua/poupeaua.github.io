@@ -8060,6 +8060,16 @@ textarea.form-control-lg {
   color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-third {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-third-rgd), var(--bs-text-opacity)) !important;
+}
+
+.text-important {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-success {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;

@@ -75,6 +75,7 @@
 
             <input name="input-custom-dropdown" class="bg-white rounded" placeholder="write some tags" value="">
 
+
             <div class="card-columns text-primary">
                 {{ range $index, $element := (where .Site.Pages "Type" "book").ByParam "Order" }}
                 <li class="card biblio-element" id="biblio{{ $index }}">
@@ -86,7 +87,7 @@
                   <div class="panel-footer">
                     <span class="label label-primary hidden">All</span>
                     {{ range .Params.Tags }}
-                      <span class="label label-default">{{ . }}</span>
+                      <span class="label badge rounded-pill bg-primary">{{ . }}</span>
                     {{ end }}
                   </div>
                 </li>
@@ -123,7 +124,7 @@
 
                 for (var x = 0; x <= totalPanel; x++){
                   var curBiblio = document.getElementById("biblio" + x);
-                  console.log(curBiblio);
+                  // console.log(curBiblio);
                   var curBiblioLabels = curBiblio.getElementsByClassName("label");
                   // console.log(curBiblioLabels);
 
@@ -132,7 +133,7 @@
                   for (let item of curBiblioLabels) {
                     curBiblioTags.push(item.innerHTML);
                   }
-                  console.log(curBiblioTags);
+                  // console.log(curBiblioTags);
                   
                   // if current element got label identicated in tags display it
                   var display = false;
@@ -145,7 +146,7 @@
 
                   if(display){
                     $("#biblio" + x ).hide();
-                    $("#biblio" + x ).fadeIn(5);
+                    $("#biblio" + x ).fadeIn();
                   } else {
                     $("#biblio" + x ).hide();
                   };
