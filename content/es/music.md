@@ -10,7 +10,7 @@ carousel:
         info: Composiciones
         subinfo: Consulta las músicas electrónicas que he hecho bajo mi nombre artístico, Chill Wind.
     carousel3:
-        info: Sobre mí
+        info: Más información
         subinfo: Descubre la relación entre la música y yo.
 
 courses:
@@ -27,7 +27,7 @@ compositions:
     title: Composiciones
 
 about:
-    title: Sobre mí
+    title: Más información
     experience:
         title: Experiencia musical
         content1: Llevo más de 15 años tocando la guitarra, he tenido la oportunidad de tocar en diferentes grupos, organizar conciertos y hacer jam.
