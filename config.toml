@@ -12,6 +12,9 @@ email = "alexandre.poupeau.contact@gmail.com"
 siteName = 'A. Poupeau'
 city = 'Grenoble, 38000'
 country = 'FRANCE'
+[params.music]
+  artistName = "Chill Wind"
+  artistImgPath = "/img/music/compo/cw-square-white.png"
 [params.navigation]
   help = 'Help'
 

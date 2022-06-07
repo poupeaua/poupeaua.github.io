@@ -9,20 +9,20 @@
         <div class="carousel-inner">
         <div class="carousel-item active" style="background-image: url(/img/music/carousel/guitar-zoom.jpg); background-size: cover; background-position: center;">
             <div class="carousel-caption">
-            <h5><a style="text-decoration: none;" href="#guitarCourseSection">Learn guitar today</a></h5>
-            <p>Materials for students learning guitar.</p>
+            <h5><a style="text-decoration: none;" href="#guitarCourseSection">{{ $.Param "carousel.carousel1.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel1.subinfo" }}</p>
             </div>
         </div>
         <div class="carousel-item" style="background-image: url(https://cdn-www.avid.com/-/media/avid/images/resource-center/images/2021-01/building-a-home-studio.jpg?h=893&iar=0&mw=1600&w=1600&hash=104AEFC05E8DD4E9B1ED18535E5C5529); background-size: cover; background-position: center;">
             <div class="carousel-caption">
-            <h5><a style="text-decoration: none;" href="#compositionsSection">Compositions</a></h5>
-            <p>Check out electronic musics I made under my artist name, Chill Wind.</p>
+            <h5><a style="text-decoration: none;" href="#compositionsSection">{{ $.Param "carousel.carousel2.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel2.subinfo" }}</p>
             </div>
         </div>
         <div class="carousel-item" style="background-image: url(/img/music/carousel/guitar-and-me.jpg); background-size: cover; background-position: center;">
             <div class="carousel-caption">
-            <h5><a style="text-decoration: none;" href="#aboutSection">About me</a></h5>
-            <p>Discover the relation between the music and me.</p>
+            <h5><a style="text-decoration: none;" href="#aboutSection">{{ $.Param "carousel.carousel3.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel3.subinfo" }}</p>
             </div>
         </div>
         </div>
@@ -44,7 +44,7 @@
 <section class="page-section portfolio" id="guitarCourseSection"> 
     <div class="container">
         <!-- Guitar Course Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Guitar Course</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ $.Param "courses.title" }}</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -52,12 +52,8 @@
             <div class="divider-custom-line"></div>
         </div>
 
-        <p class="text-center">
-            You will find here materials to help you enhance both your guitar skills and your music theory knowledge at the same pace. 
-            The courses are divided into 4 categories. I recommend to follow the path : <b>Beginner - Intermediate - Advanced</b> and to complete the courses in order. Indeed each course is a brick that helps you understand more advanced concepts. 
-            The <b>Extra</b> part is meant to display additional content for further exploration.
-        </p>
-        <p class="text-center mb-5">Disclaimer : these courses are meant to provide materials to the student as a complement to courses with a guitar teacher.</p>
+        <p class="text-center">{{ $.Param "courses.intro" | markdownify }}</p>
+        <p class="text-center mb-5">{{ $.Param "courses.disclaimer" | markdownify }}</p>
 
         
         <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -65,7 +61,7 @@
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                 <button class="accordion-button btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beginnerCourse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                     <i class="fas fa-shapes me-2"></i>
-                    Beginner
+                    {{ $.Param "courses.levels.beginner" }}
                 </button>
                 </h2>
                 <div id=beginnerCourse class="collapse">
@@ -132,7 +128,7 @@
                 <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                 <button class="accordion-button btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intermediateCourse" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                     <i class="fas fa-book-open me-2"></i>
-                    Intermediate
+                    {{ $.Param "courses.levels.intermediate" }}
                 </button>
                 </h2>
 
@@ -210,7 +206,7 @@
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                 <button class="accordion-button  btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advancedCourse" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                     <i class="fas fa-graduation-cap me-2"></i>
-                    Advanced
+                    {{ $.Param "courses.levels.advanced" }}
                 </button>
                 </h2>
                 <div id=advancedCourse class="collapse">
@@ -280,7 +276,7 @@
                 <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                     <button class="accordion-button btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#extraCourse" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                     <i class="fas fa-plus-circle me-2"></i>
-                    Extra
+                    {{ $.Param "courses.levels.extra" }}
                     </button>
                 </h2>
                 <div id=extraCourse class="collapse">
@@ -398,12 +394,12 @@
 
         <!-- Compo Chill Wind img-->
         <div class="container" style="width: 15rem; height: 15rem;">
-            <img class="logo-compo" src="/img/music/compo/cw-square-white.png" atl="chillwindlogo">
+            <img class="logo-compo" src="{{ .Site.Params.Music.artistImgPath }}" atl="chillwindlogo">
         </div>
 
         <!-- Compo Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">Chill Wind</h2>
-        <h4 class="text-uppercase text-center text-white">Compositions</h4>
+        <h2 class="page-section-heading text-center text-uppercase text-white">{{ .Site.Params.Music.artistName }}</h2>
+        <h4 class="text-uppercase text-center text-white">{{ $.Param "compositions.title" }}</h4>
 
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
@@ -457,7 +453,7 @@
 <section class="page-section bg-white text-white mb-0" id="aboutSection">
     <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary">About</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary">{{ $.Param "about.title" }}</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -467,14 +463,14 @@
         <!-- About Section Content-->
         <div class="row text-secondary">
             <div class="col-lg-4 ms-auto">
-                <h4>Music Experience</h4>
-                <p class="lead ">I have been playing guitar for over 15 years now, I have had the opportunity to play in different groups, organize concerts and jam.</p>
-                <p class="lead">I love to put my patience and motivation into teaching guitar. I teach guitar the way I would have loved to be taught when I first started. I focus on both practice and Music Theory.</p>
+                <h4>{{ $.Param "about.experience.title" }}</h4>
+                <p class="lead ">{{ $.Param "about.experience.content1" }}</p>
+                <p class="lead">{{ $.Param "about.experience.content2" }}</p>
             </div>
             <div class="col-lg-4 me-auto">
-                <h4>Electronic Music Creation</h4>
-                <p class="lead">In 2017, I started to create my own electronic music on computer. It was a lot of fun ! I had the chance to learn a lot throughout this adventure about MAO such as FlStudio or Ableton. </p>
-                <p class="lead">In a theoretical way, it was also great to learn about new concepts such as mastering, mixing and composition.</p>
+                <h4>{{ $.Param "about.mao.title" }}</h4>
+                <p class="lead">{{ $.Param "about.mao.content1" }} </p>
+                <p class="lead">{{ $.Param "about.mao.content2" }}</p>
             </div>
         </div>
     </div>
