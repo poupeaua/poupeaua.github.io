@@ -27,3 +27,12 @@ From time to time I paint, so I wanted to be able to share my paintings with you
 ### Pro
 
 The objective in this page is to display information about my job, my resume and other professional related stuff.
+
+## Launch a test server with Hugo locally
+
+```
+hugo
+cd docs
+python3 -m http.server 1313
+cd ..
+```

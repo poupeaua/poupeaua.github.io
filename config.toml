@@ -20,7 +20,7 @@ country = 'FRANCE'
 
 [languages]
   [languages.en]
-    title = 'My blog'
+    title = 'A. Poupeau Website'
     url = "/"
     contentDir = "content/en"
     languageName = "English"
@@ -29,7 +29,7 @@ country = 'FRANCE'
     [languages.en.params]
       linkedin = 'https://linkedin.com/whoever'
   [languages.fr]
-    title = 'Mon blogue'
+    title = 'A. Poupeau Sitio Web'
     contentDir = "content/fr"
     languageName = "Français"
     languageShort = "FR"
@@ -39,7 +39,7 @@ country = 'FRANCE'
       [languages.fr.params.navigation]
         help = 'Aide'
   [languages.es]
-    title = 'mi blogua'
+    title = 'A. Poupeau Site Web'
     contentDir = "content/es"
     languageName = "Español"
     languageShort = "ES"

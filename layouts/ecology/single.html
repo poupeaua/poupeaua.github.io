@@ -73,7 +73,7 @@
 
             <p class="mb-5 text-center"><i>"It is no measure of health to be well adjusted to a profoundly sick society."</i> - Jiddu Krishnamurti</p>
 
-            <input name="input-custom-dropdown" class="bg-white rounded" placeholder="write some tags" value="">
+            <input name="input-custom-dropdown" class="bg-white rounded text-primary" placeholder="write some tags" value="">
 
 
             <div class="card-columns text-primary">
@@ -98,7 +98,7 @@
               var input = document.querySelector('input[name="input-custom-dropdown"]'),
                 // init Tagify script on the above inputs
                 tagify = new Tagify(input, {
-                  whitelist: ["systemic", "climate change", "psychology", , "politics", "energy", "oil", "metals"],
+                  whitelist: ["systemic", "climate change", "psychology", "politics", "energy", "oil", "metals"],
                   maxTags: 10,
                   dropdown: {
                     maxItems: 20,           // <- mixumum allowed rendered suggestions
@@ -116,7 +116,7 @@
                   for (let item of tagsVal) {
                     tagsArray.push(item.value);
                   }
-                console.log("Array of tags :" + JSON.stringify(tagsArray));
+                // console.log("Array of tags :" + JSON.stringify(tagsArray));
                 // console.log(Array.isArray(tagsArray));
 
                 var biblio = document.getElementsByClassName("biblio-element");
@@ -136,13 +136,9 @@
                   // console.log(curBiblioTags);
                   
                   // if current element got label identicated in tags display it
-                  var display = false;
-                  for (let item of curBiblioLabels) {
-                    if (tagsArray.includes(item.innerHTML)) {
-                      display = true;
-                      break;
-                    }
-                  }
+                  const display = tagsArray.every(element => {
+                    return curBiblioTags.indexOf(element) !== -1;
+                  });
 
                   if(display){
                     $("#biblio" + x ).hide();
