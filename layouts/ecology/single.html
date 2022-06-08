@@ -8,8 +8,8 @@
       <div class="carousel-inner">
         <div class="carousel-item active" style="background-image: url(/img/ecology/carousel/art-ipcc-curv.jpeg); background-size: cover; background-position: center;">
           <div class="carousel-caption text-primary">
-            <h5><a style="text-decoration: none;" href="https://www.jillpelto.com/currents/" target="_blank"><i>Currents</i>, Watercolor And Colored Pencil, 2020</a></h5>
-            <p>Jill Pelto climate change artist</p>
+            <h5><a style="text-decoration: none;" href="https://www.jillpelto.com/currents/" target="_blank">{{ $.Param "carousel.carousel1.info" | markdownify }}</a></h5>
+            <p>{{ $.Param "carousel.carousel1.subinfo" }}</p>
           </div>
         </div>
       </div>
@@ -19,7 +19,7 @@
     <section class="page-section bg-white text-secondary mb-0" id="timeline">
         <div class="container">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase">Timelines</h2>
+            <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "timeline.title" }}</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -27,11 +27,9 @@
                 <div class="divider-custom-line"></div>
             </div>
 
-            <p class="text-center">
-              Timelines are a great and easy way to visualize the Anthropocene epoch and its systemic consequences: global warming, biodiversity eradication, energy concerns, ressources consumption and more.
-            </p>
+            <p class="text-center">{{ $.Param "timeline.intro" }}</p>
 
-            <p class="text-center"><i>"C'est d'âme qu'il faut changer, non de climat"</i> - Sénèque</p>
+            <p class="text-center">{{ $.Param "timeline.citation" | markdownify }}</p>
 
             <ul class="timeline" id="accordion">
                 {{ range $index, $element := (where .Site.Pages "Type" "timelineEvent").ByParam "Order" }}
@@ -58,7 +56,7 @@
     <section class="page-section bg-primary text-white mb-0" id="about">
         <div class="container">
             <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-white">Bibliography</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-white">{{ $.Param "biblio.title" }}</h2>
             <!-- Icon Divider-->
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
@@ -66,15 +64,11 @@
                 <div class="divider-custom-line"></div>
             </div>
 
-            <p class="text-center">
-              Reading is a great way to get informed and involved in the systemic concern we must all face.
-              It is not always easy to know where to start : here are some propositions.
-            </p>
+            <p class="text-center">{{ $.Param "biblio.intro" }}</p>
 
-            <p class="mb-5 text-center"><i>"It is no measure of health to be well adjusted to a profoundly sick society."</i> - Jiddu Krishnamurti</p>
+            <p class="mb-5 text-center">{{ $.Param "biblio.citation" | markdownify }}</p>
 
             <input name="input-custom-dropdown" class="bg-white rounded text-primary" placeholder="write some tags" value="">
-
 
             <div class="card-columns text-primary">
                 {{ range $index, $element := (where .Site.Pages "Type" "book").ByParam "Order" }}
@@ -82,7 +76,7 @@
                   <img class="card-img-top" src="{{ .Params.img }}">
                   <div class="card-body">
                     <h5 class="card-title">{{ .Title }}</h5>
-                    {{ .Content }}                      
+                    {{ .Content }}             
                   </div>
                   <div class="panel-footer">
                     <span class="label label-primary hidden">All</span>
@@ -101,7 +95,7 @@
                   whitelist: ["systemic", "climate change", "psychology", "politics", "energy", "oil", "metals"],
                   maxTags: 10,
                   dropdown: {
-                    maxItems: 20,           // <- mixumum allowed rendered suggestions
+                    maxItems: 20,           // <- maximum allowed rendered suggestions
                     classname: "tags-look", // <- custom classname for this dropdown, so it could be targeted
                     enabled: 0,             // <- show suggestions on focus
                     closeOnSelect: false    // <- do not hide the suggestions dropdown once an item has been selected
@@ -156,7 +150,7 @@
     <section class="page-section bg-white text-secondary mb-0" id="about">
       <div class="container">
           <!-- About Section Heading-->
-          <h2 class="page-section-heading text-center text-uppercase">Videos</h2>
+          <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "videos.title" }}</h2>
           <!-- Icon Divider-->
           <div class="divider-custom">
               <div class="divider-custom-line"></div>
@@ -164,14 +158,12 @@
               <div class="divider-custom-line"></div>
           </div>
 
-          <p class="text-center">
-            Watching films, series, documentaries, conferences is another way to learn more about the systemic concern. I would rather suggest conferences as the content is more transparent, the exchange more human and overall the content is more factual and not catastrophic.
-          </p>
+          <p class="text-center">{{ $.Param "videos.intro" }}</p>
 
-          <p class="mb-5 text-center"><i>"A clever person solves a problem. A wise person avoids it."</i> - Albert Einstein</p>
+          <p class="mb-5 text-center">{{ $.Param "videos.citation" | markdownify }}</p>
 
           <!-- Conferences -->
-          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-person-video3"></i> Conferences & Interviews</h3>
+          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-person-video3"></i> {{ $.Param "videos.elements.conferences" }}</h3>
           <div class="row justify-content-center">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
               <iframe class="iframe-compo" src="https://www.youtube.com/embed/FoCN8vFPMz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
@@ -200,7 +192,7 @@
           </div>
 
           <!-- Documentaries -->
-          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-play-btn-fill"></i> Documentaries</h3>
+          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-play-btn-fill"></i> {{ $.Param "videos.elements.documentaries" }}</h3>
           <div class="row justify-content-center">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
               <iframe class="iframe-compo" src="https://www.youtube.com/embed/GZ4izGzj9r0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -217,7 +209,7 @@
           </div>
 
           <!-- Film & Series -->
-          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-film"></i> Films & Series</h3>
+          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-film"></i> {{ $.Param "videos.elements.films" }}</h3>
           <div class="row justify-content-center">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
               <iframe class="iframe-compo" src="https://www.youtube.com/embed/RbIxYm3mKzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -234,7 +226,7 @@
     <section class="page-section bg-primary text-white mb-0" id="about">
       <div class="container">
           <!-- About Section Heading-->
-          <h2 class="page-section-heading text-center text-uppercase">Actions</h2>
+          <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "actions.title" }}</h2>
           <!-- Icon Divider-->
           <div class="divider-custom divider-light">
               <div class="divider-custom-line"></div>
@@ -242,83 +234,22 @@
               <div class="divider-custom-line"></div>
           </div>
 
-          <p class="text-center"><i>"Never deny the power of a small group of committed individuals to change the world. Indeed that is the only thing that ever has."</i> - Margaret Mead</p>
+          <p class="text-center">{{ $.Param "actions.citation" | markdownify}}</p>
 
           <!-- Actions -->
           <div class="card-columns text-primary">
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/blast.jpeg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Blast, independent media</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Different actions to consider</h6>
-                <p class="card-text">Below is link to a video from an independent media that proposes actions to fight the crisis. The description of the video provides more possible actions.</p>
-                <a href="https://www.youtube.com/watch?v=8BXyHtO2mzc" target="_blank" class="card-link">Blast, Ecological Actions video</a>
+              {{ range $index, $element := (where .Site.Pages "Type" "action").ByParam "Order" }}
+              <div class="card" style="cursor: pointer;" onclick="window.open('{{ .Params.link }}');">
+                <img class="card-img-top" src="{{ .Params.img }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ .Title }}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{ .Params.Subtitle }}</h6>
+                  <p class="card-text">
+                    {{ .Content }}
+                  </p>
+                </div>
               </div>
-            </div>              
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/climatefresk.webp" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Climate Fresk</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Teach others about Climate Change</h6>
-                <p class="card-text">Like I and lots of people, you can become a facilitator to animate workshops on climate change!</p>
-                <a href="https://climatefresk.org/" target="_blank" class="card-link">Climate Fresk Website</a>                        
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/reduce-your-carbon-footprint-logo.jpeg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Reduce your carbon footprint</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Calculate your footprint first</h6>
-                <p class="card-text">Currently the french mean is around 10t CO2 per year but let's reach 2t CO2 per year !</p>
-                <a href="https://nosgestesclimat.fr/" target="_blank" class="card-link">French</a>
-                <a href="https://www.carbonfootprint.com/calculator.aspx" target="_blank" class="card-link">English</a>                                               
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/shiftyourjob.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Shift your job</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Play a role for change</h6>
-                <p class="card-text">A way to see what job could have an direct or indirect impact on the revolution.</p>
-                <a href="https://shiftyourjob.org/" target="_blank" class="card-link">Shift your Job Website</a>                        
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/wwf.jpeg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">World Wide Fund for Nature</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Donate to or Join an International NGO</h6>
-                <p class="card-text">As the world’s leading conservation organization, WWF works in nearly 100 countries to tackle the most pressing issues at the intersection of nature, people, and climate.</p>
-                <a href="https://www.worldwildlife.org/" target="_blank" class="card-link">WWF Website</a>                        
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/greenpeace.jpeg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Greenpeace</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Donate to or Join an International NGO</h6>
-                <p class="card-text">Greenpeace is a network of independent organisations, which uses peaceful, creative confrontation to expose global environmental problems, and develop solutions for a green and peaceful future.</p>
-                <a href="https://www.greenpeace.org/international/" target="_blank" class="card-link">Greenpeace Website</a>                        
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/momentum-institute.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Momentum Institute</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Donate or engage for resilience</h6>
-                <p class="card-text">The main purpose of this association is to assemble contributors around the issues of transition, degrowth and resilience.</p>
-                <a href="https://www.institutmomentum.org/language/en/" target="_blank" class="card-link">Momentum Institut Website</a>                        
-              </div>
-            </div>
-            <div class="card">
-              <img class="card-img-top" src="/img/ecology/actions/ipcc.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">IPCC</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Participate in the work of the IPCC</h6>
-                <p class="card-text">Hundreds of experts in different fields volunteer their time and expertise to produce IPCC reports. Thousands more contribute to the review process and to the literature and other knowledge that are assessed in IPCC reports. These scientists are not paid by the IPCC.</p>
-                <a href="https://www.ipcc.ch/about/engage_with_the_ipcc/" target="_blank" class="card-link">Engage with IPCC Website</a>                        
-              </div>
-            </div>
+              {{ end }}
           </div>
       </div>
     </section>

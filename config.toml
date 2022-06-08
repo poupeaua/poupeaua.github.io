@@ -29,7 +29,7 @@ country = 'FRANCE'
     [languages.en.params]
       linkedin = 'https://linkedin.com/whoever'
   [languages.fr]
-    title = 'A. Poupeau Sitio Web'
+    title = 'A. Poupeau Site Web'
     contentDir = "content/fr"
     languageName = "Français"
     languageShort = "FR"
@@ -39,7 +39,7 @@ country = 'FRANCE'
       [languages.fr.params.navigation]
         help = 'Aide'
   [languages.es]
-    title = 'A. Poupeau Site Web'
+    title = 'A. Poupeau Sitio Web'
     contentDir = "content/es"
     languageName = "Español"
     languageShort = "ES"
