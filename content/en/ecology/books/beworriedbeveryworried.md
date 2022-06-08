@@ -1,12 +1,12 @@
 ---
 Title: Be Worried. Be Very Worried.
+Subtitle:  Time Magazine - 2006
 Type: "book"
 Tags: ["climate change"]
+TagsLanguages: ["english"]
 img: /img/ecology/biblio/beworriedbeveryworried.jpg
 hidden: true
-link: ""
+link: "http://content.time.com/time/magazine/article/0,9171,1176980,00.html"
 ---
 
-###### Intergovernmental Panel on Climate Change (IPCC)
-
-The most important and reliable scientific source about climate change.
+Earth at the Tipping Point: Global Warming Heats Up

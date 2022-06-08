@@ -9,14 +9,17 @@ carousel:
 
 timeline:
     title: Timeline
-    intro: "Timelines are a great and easy way to visualize the Anthropocene epoch and its systemic consequences: global warming, biodiversity eradication, energy concerns, ressources consumption and more."
-    citation: "*\"we do not inherit the earth from our parents; we borrow it from our children.*\" - Antoine de Saint-Exupéry"
+    intro: "Timelines are a great and easy way to visualize the Anthropocene epoch and its systemic consequences over time: global warming, biodiversity eradication, energy concerns, ressources consumption and more."
+    citation: "*\"We do not inherit the earth from our parents; we borrow it from our children.*\" - Antoine de Saint-Exupéry"
 
 
 biblio:
     title: Bibliography
     intro: "Reading is a great way to get informed and involved in the systemic concern we must all face. It is not always easy to know where to start : here are some propositions."
     citation: "*\"It is no measure of health to be well adjusted to a profoundly sick society.*\" - Jiddu Krishnamurti"
+    tags:
+        input: write some tags
+        list: ["systemic", "climate change", "psychology", "politics", "energy", "oil", "metals", "english", "french"]
 
 videos:
     title: Videos

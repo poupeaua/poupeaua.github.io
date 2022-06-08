@@ -7,4 +7,4 @@ hidden: true
 link: "https://climatefresk.org/"
 ---
 
-Like I and lots of people, you can become a facilitator to animate workshops on climate change!
+Like lots of people and I, you can become a facilitator to animate workshops on climate change!

@@ -68,23 +68,27 @@
 
             <p class="mb-5 text-center">{{ $.Param "biblio.citation" | markdownify }}</p>
 
-            <input name="input-custom-dropdown" class="bg-white rounded text-primary" placeholder="write some tags" value="">
+            <input name="input-custom-dropdown" class="bg-white rounded text-primary" placeholder="{{ $.Param "biblio.tags.input" }}" value="">
 
             <div class="card-columns text-primary">
                 {{ range $index, $element := (where .Site.Pages "Type" "book").ByParam "Order" }}
-                <li class="card biblio-element" id="biblio{{ $index }}">
+                <div class="card biblio-element" id="biblio{{ $index }}" style="cursor: pointer;" onclick="window.open('{{ .Params.link }}');">
                   <img class="card-img-top" src="{{ .Params.img }}">
                   <div class="card-body">
                     <h5 class="card-title">{{ .Title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ .Params.Subtitle }}</h6>
                     {{ .Content }}             
                   </div>
                   <div class="panel-footer">
                     <span class="label label-primary hidden">All</span>
                     {{ range .Params.Tags }}
-                      <span class="label badge bg-primary">{{ . }}</span>
+                    <span class="label badge bg-primary">{{ . }}</span>
+                    {{ end }}
+                    {{ range .Params.TagsLanguages }}
+                    <span class="label hidden">{{ . }}</span>
                     {{ end }}
                   </div>
-                </li>
+                </div>
                 {{ end }}
             </div>
 
@@ -92,7 +96,7 @@
               var input = document.querySelector('input[name="input-custom-dropdown"]'),
                 // init Tagify script on the above inputs
                 tagify = new Tagify(input, {
-                  whitelist: ["systemic", "climate change", "psychology", "politics", "energy", "oil", "metals"],
+                  whitelist: {{ $.Param "biblio.tags.list" }},
                   maxTags: 10,
                   dropdown: {
                     maxItems: 20,           // <- maximum allowed rendered suggestions

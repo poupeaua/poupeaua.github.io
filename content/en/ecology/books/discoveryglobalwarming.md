@@ -1,12 +1,12 @@
 ---
 Title: The Discovery of Global Warming
+Subtitle: Spencer R. Weart - 2003
 Type: "book"
 Tags: ["climate change"]
+TagsLanguages: ["english"]
 img: /img/ecology/biblio/discoveryglobalwarming.jpg
 hidden: true
-link: ""
+link: "https://history.aip.org/climate/reviews.htm"
 ---
 
-###### Intergovernmental Panel on Climate Change (IPCC)
-
-The most important and reliable scientific source about climate change.
+History about how Global Warming was discovered.

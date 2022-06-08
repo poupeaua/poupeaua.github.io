@@ -1,12 +1,11 @@
 ---
 Title: Trajectories of the Earth System
+Subtitle: Proceedings of the National academy of Sciences - 2018
 Type: "book"
 Tags: ["systemic", "climate change"]
 img: /img/ecology/biblio/trajectoriesearthsystem.webp
 hidden: true
-link: ""
+link: "https://www.pnas.org/doi/epdf/10.1073/pnas.1810141115"
 ---
 
-###### Intergovernmental Panel on Climate Change (IPCC)
-
-The most important and reliable scientific source about climate change.
+We explore the risk that self-reinforcing feedbacks could push the Earth System toward a planetarythreshold that, if crossed, could prevent stabilization of the climate at intermediate temperature rises andcause continued warming on a“Hothouse Earth”pathway even as human emissions are reduced.

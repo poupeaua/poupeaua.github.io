@@ -1,12 +1,12 @@
 ---
 Title: The Psychology of Climate Change Communication
+Subtitle: Center for Research on Environmental Decisions - 2009
 Type: "book"
 Tags: ["climate change", "psychology"]
+TagsLanguages: ["english"]
 img: /img/ecology/biblio/psychologyofclimatechangecommunication.png
 hidden: true
-link: ""
+link: "http://guide.cred.columbia.edu/pdfs/CREDguide_full-res.pdf"
 ---
 
-###### Intergovernmental Panel on Climate Change (IPCC)
-
-The most important and reliable scientific source about climate change.
+A great psychological guide for anybody interested in enhancing its communication skills about climate change and more.
