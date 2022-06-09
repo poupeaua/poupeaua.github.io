@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Timelines on My blog</title>
+    <link>http://localhost:1313/timeline/</link>
+    <description>Recent content in Timelines on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Everything is mine</copyright><atom:link href="http://localhost:1313/timeline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1st Patented Gasoline Car</title>
+      <link>http://localhost:1313/timeline/1886_car/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/timeline/1886_car/</guid>
+      <description>An economist ahead of its time &amp;ldquo;Are we wise in allowing the commerce of this country to rise beyond the point at which we can long maintain it?&amp;rdquo; asked rhetorically the british economist Stanley Jevons in 1865 in his book  The Coal Question: An Inquiry Concerning the Progress of the Nation, and the Probable Exhaustion of Our Coal Mines  . Mr Jevons was a visionnary, indeed he was already conscious of three important points:</description>
+    </item>
+    
+    <item>
+      <title>The Coal Question</title>
+      <link>http://localhost:1313/timeline/1865_coal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/timeline/1865_coal/</guid>
+      <description>An economist ahead of its time &amp;ldquo;Are we wise in allowing the commerce of this country to rise beyond the point at which we can long maintain it?&amp;rdquo; asked rhetorically the british economist Stanley Jevons in 1865 in his book  The Coal Question: An Inquiry Concerning the Progress of the Nation, and the Probable Exhaustion of Our Coal Mines  . Mr Jevons was a visionnary, indeed he was already conscious of three important points:</description>
+    </item>
+    
+  </channel>
+</rss>
