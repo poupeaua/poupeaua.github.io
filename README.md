@@ -31,8 +31,10 @@ The objective in this page is to display information about my job, my resume and
 ## Launch a test server with Hugo locally
 
 ```
-hugo
-cd docs
-python3 -m http.server 1313
-cd ..
+hugo server -D --baseURL http://localhost:1313/
+```  
+
+For final tests, generate your local site and test it with :
+```
+./hugo_exec.sh
 ```
