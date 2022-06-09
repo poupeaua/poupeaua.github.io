@@ -14,7 +14,7 @@ carousel:
         subinfo: Tómate tiempo para el arte
 
 artworks:
-    title: Artworks
+    title: Obras de arte
 
 about:
     title: Más información

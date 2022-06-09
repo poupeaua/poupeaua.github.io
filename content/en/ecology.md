@@ -33,9 +33,4 @@ videos:
 actions:
     title: Actions
     citation: "*\"Never deny the power of a small group of committed individuals to change the world. Indeed that is the only thing that ever has.*\" - Margaret Mead"
-
-
-
-
-
 ---

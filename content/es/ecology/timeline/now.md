@@ -7,51 +7,48 @@ hidden: "true"
 id: now
 ---
 
-#### Study, Share and Act
+#### Estudiar, compartir y actuar
 
-You can be a thinker, a maker, an instigator, an organiser or a facilitator (Arthur Keller - 2022).
+Puedes ser un pensador, un creador, un instigador, un organizador o un facilitador (Arthur Keller - 2022).
 
-**The important thing it to stop denying**. If we deeply understand we will act accordingly. Even though Naomi Klein is focused on climate change, this applies for the systemic concern:
+**Lo importante es dejar de negar**. Si comprendemos profundamente, actuaremos en consecuencia. Aunque Naomi Klein se centra en el cambio climático, esto se aplica a la preocupación sistémica:
 
 {{< rawhtml >}}
 <figure class="bg-primary p-3 rounded text-white">
 <blockquote>
 <p>
-A great many of us engage in this kind of climate change denial. We look for a 
-split second and then we look away. Or we look but then turn it into a joke ("more 
-signs of the Apocalypse!"). Which is another way of looking away. <br><br>
+Muchos de nosotros participamos en este tipo de negación del cambio climático. buscamos un
+una fracción de segundo y luego apartamos la mirada. O miramos pero luego lo convertimos en una broma ("más
+signos del Apocalipsis!"). Lo cual es otra forma de mirar hacia otro lado. <br><br>
 
-Or we look but tell ourselves comforting stories about how humans are clever 
-and will come up with a technological miracle that will safely suck the carbon out 
-of the skies or magically turn down the heat of the sun. Which, I was to discover 
-while researching this book, is yet another way of looking away. <br><br>
+O miramos pero nos contamos historias reconfortantes sobre cómo los humanos son inteligentes
+y se les ocurrirán un milagro tecnológico que succionará de forma segura el carbono
+de los cielos o mágicamente bajarán el calor del sol. Yo iba a descubrir todo esos temas
+mientras investigaba por este libro, es otra forma más de mirar hacia otro lado. <br><br>
 
-Or we look but try to be hyper-rational about it ("dollar for dollar it's more 
-efficient to focus on economic development than climate change, since wealth is 
-the best protection from weather extremes") — as if having a few more dollars will 
-make much difference when your city is underwater. Which is a way of looking 
-away if you happen to be a policy wonk. <br><br>
+O miramos pero tratamos de ser hiper-racionales al respecto ("dólar por dólar es más
+más eficiente centrarse en el desarrollo económico que el cambio climático, ya que la riqueza es
+la mejor protección contra las inclemencias del tiempo"), como si tener unos cuantos dólares más
+hace mucha diferencia cuando tu ciudad está bajo el agua. Es otra forma de mirar
+lejos si resulta que eres un experto en políticas. <br><br>
 
-Or we look but tell ourselves we are too busy to care about something so distant 
-and abstract — even though we saw the water in the subways in New York City, 
-and the people on their rooftops in New Orleans, and know that no one is safe, the 
-most vulnerable least of all. And though perfectly understandable, this too is a way 
-of looking away. <br><br>
+O miramos pero nos decimos que estamos demasiado ocupados para preocuparnos por algo tan distante
+y abstracto, aunque vimos el agua en el metro de la ciudad de Nueva York,
+y la gente en sus azoteas en Nueva Orleans, y saben que nadie está a salvo. Y aunque perfectamente comprensible, esto también es una manera de mirar hacia otro lado. <br><br>
 
-Or we look but tell ourselves that all we can do is focus on ourselves. Meditate 
-and shop at farmers' markets and stop driving — but forget trying to actually change 
-the systems that are making the crisis inevitable because that's too much "bad 
-energy" and it will never work. And at first it may appear as if we are looking, 
-because many of these lifestyle changes are indeed part of the solution, but we still 
-have one eye tightly shut. <br><br>
+O miramos pero nos decimos que todo lo que podemos hacer es centrarnos en nosotros mismos. Meditar
+y comprar en los mercados de agricultores y dejar de conducir. Pero olvidamos de tratar de cambiar realmente
+los sistemas que están haciendo que la crisis sea inevitable porque eso son demasiadas "malas
+vibras" y nunca funcionará. Y al principio puede parecer como si estuviéramos mirando,
+porque muchos de estos cambios en el estilo de vida son parte de la solución, pero todavía
+tenemos un ojo bien cerrado. <br><br>
 
-Or maybe we do look — really look — but then, inevitably, we seem to forget. 
-Remember and then forget again. Climate change is like that; it's hard to keep it 
-in your head for very long. We engage in this odd form of on-again-off-again 
-ecological amnesia for perfectly rational reasons. We deny because we fear that 
-letting in the full reality of this crisis will change everything. And we are right.
+O tal vez miramos, realmente miramos, pero luego, inevitablemente, olvidamos.
+Recuerdamos y luego vuelvemos a olvidar. El cambio climático es así; es dificil mantenerlo
+en tu cabeza por mucho tiempo. Nos involucramos en esta extraña forma de amnesia ecológica por razones perfectamente racionales. Negamos porque tememos que
+entender que la realidad de esta crisis lo cambiará todo. Y tenemos razón.
 </p>
 </blockquote>
-<figcaption>—Naomi Klein, <cite><a href="https://archive.org/stream/pdfy-Skb-ch_k7psDm90Q/Naomi%20Klein%20-%20This%20Changes%20Everything_djvu.txt" target="_blank">This Changes Everything</a> book introduction, 2014</figcaption>
+<figcaption>—Naomi Klein, <cite><a href="https://archive.org/stream/pdfy-Skb-ch_k7psDm90Q/Naomi%20Klein%20-%20This%20Changes%20Everything_djvu.txt" target="_blank">Esto lo cambia todo</a> introducción del libro, 2014</figcaption>
 </figure>
 {{< /rawhtml >}}
