@@ -35,7 +35,7 @@ experiences:
 engage:
     title: Contratame
     list:
-        exp: He participado a más de <span class="text-important">30 eventos</span> como mago de cartas
+        exp: He participado a más de <span class="text-important">30 eventos</span> como mago de las cartas
         events: Soy capaz de hacer un espectáculo de más de <span class="text-important">2 horas</span>
         languages: Puedo realizar trucos de magia en <span class="text-important">francés, inglés o español</span>
 ---
