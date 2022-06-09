@@ -1,0 +1,18 @@
+{
+    "footer": {
+       "location": {
+           "other": "Localisation"
+       },
+       "aroundWeb": {
+           "other": "Autour du Web"
+       },
+       "contactMe": {
+           "other": "Contactez-moi"
+       }
+    },
+    "nav": {
+        "menu": {
+            "other": "Menu"
+        }
+    }
+ }

@@ -1,0 +1,86 @@
+{{ define "main" }}
+<header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url(/img/painting/carousel/abstract-0.jpg); background-size: cover; background-position: center;">
+          <div class="carousel-caption">
+            <h5><a style="text-decoration: none;" href="#artworksSection">{{ $.Param "carousel.carousel1.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel1.subinfo" }}</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(/img/painting/carousel/abstract-1.jpg); background-size: cover; background-position: center;">
+          <div class="carousel-caption">
+            <h5><a style="text-decoration: none;" href="#artworksSection">{{ $.Param "carousel.carousel2.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel2.subinfo" }}</p>
+          </div>
+        </div>
+        <div class="carousel-item" style="background: url(/img/painting/carousel/pink-trees.jpg); background-size: cover; background-position: center;">
+          <div class="carousel-caption" onclick="location.href='#aboutSection'">
+            <h5><a style="text-decoration: none;" href="#aboutSection">{{ $.Param "carousel.carousel3.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel3.subinfo" }}</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</header>
+
+<section class="page-section bg-white text-white mb-0" id="artworksSection">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary">{{ $.Param "artworks.title" }}</h2>
+
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="bi bi-palette-fill"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+
+        <!-- Place <div> tag where you want the feed to appear -->
+        <div id="curator-feed-default-feed-layout">
+            <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+            </div><!-- The Javascript can be moved to the end of the html page before the </body> tag --><script type="text/javascript">
+            /* curator-feed-default-feed-layout */
+            (function(){
+            var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+            i.src="https://cdn.curator.io/published/d3edd2fd-d76f-4f4f-82e2-faefb531baae.js";
+            e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+            })();
+            </script>
+    </div>
+</section>
+
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="aboutSection">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">{{ $.Param "about.title" }}</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="bi bi-question-lg"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ms-auto"><p class="lead">{{ $.Param "about.content1" }}</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead">{{ $.Param "about.content2" }}</p></div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

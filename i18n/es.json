@@ -1,0 +1,18 @@
+{
+    "footer": {
+       "location": {
+           "other": "Ubicación"
+       },
+       "aroundWeb": {
+           "other": "En el Internet"
+       },
+       "contactMe": {
+           "other": "Contácteme"
+       }
+    },
+    "nav": {
+        "menu": {
+            "other": "Menú"
+        }
+    }
+ }

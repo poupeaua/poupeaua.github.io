@@ -1,0 +1,261 @@
+{{ define "main" }}
+
+<header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="bg-primary active" aria-current="true" aria-label="Slide 1"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url(/img/ecology/carousel/art-ipcc-curv.jpeg); background-size: cover; background-position: center;">
+          <div class="carousel-caption text-primary">
+            <h5><a style="text-decoration: none;" href="https://www.jillpelto.com/currents/" target="_blank">{{ $.Param "carousel.carousel1.info" | markdownify }}</a></h5>
+            <p>{{ $.Param "carousel.carousel1.subinfo" }}</p>
+          </div>
+        </div>
+      </div>
+  </header>
+
+    <!-- Timeline Section-->
+    <section class="page-section bg-white text-secondary mb-0" id="timeline">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "timeline.title" }}</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="bi bi-calendar2-week-fill"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <p class="text-center">{{ $.Param "timeline.intro" }}</p>
+
+            <p class="text-center">{{ $.Param "timeline.citation" | markdownify }}</p>
+
+            <ul class="timeline" id="accordion">
+                {{ range $index, $element := (where .Site.Pages "Type" "timelineEvent").ByParam "Order" }}
+                <li class="timeline-event">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                      <a class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ .Params.id }}" aria-expanded="false" aria-controls="collapseOne">
+                        <p class="timeline-event-thumbnail">{{ .Params.Year }}</p>
+                        <p class="timeline-event-title">{{ .Title }}</p>
+                      </a>
+                      <div id="{{ .Params.id }}" class="collapse" data-bs-parent="#accordion">
+                        <h3>{{ .Title }}</h3>
+                        {{ .Content }}
+                      </div>
+                    </div>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Bibliography Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">{{ $.Param "biblio.title" }}</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="bi bi-book"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+
+            <p class="text-center">{{ $.Param "biblio.intro" }}</p>
+
+            <p class="mb-5 text-center">{{ $.Param "biblio.citation" | markdownify }}</p>
+
+            <input name="input-custom-dropdown" class="bg-white rounded text-primary" placeholder="{{ $.Param "biblio.tags.input" }}" value="">
+
+            <div class="card-columns text-primary">
+                {{ range $index, $element := (where .Site.Pages "Type" "book").ByParam "Order" }}
+                <div class="card biblio-element" id="biblio{{ $index }}" style="cursor: pointer;" onclick="window.open('{{ .Params.link }}');">
+                  <img class="card-img-top" src="{{ .Params.img }}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ .Title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ .Params.Subtitle }}</h6>
+                    {{ .Content }}             
+                  </div>
+                  <div class="panel-footer">
+                    <span class="label label-primary hidden">All</span>
+                    {{ range .Params.Tags }}
+                    <span class="label badge bg-primary">{{ . }}</span>
+                    {{ end }}
+                    {{ range .Params.TagsLanguages }}
+                    <span class="label hidden">{{ . }}</span>
+                    {{ end }}
+                  </div>
+                </div>
+                {{ end }}
+            </div>
+
+            <script>
+              var input = document.querySelector('input[name="input-custom-dropdown"]'),
+                // init Tagify script on the above inputs
+                tagify = new Tagify(input, {
+                  whitelist: {{ $.Param "biblio.tags.list" }},
+                  maxTags: 10,
+                  dropdown: {
+                    maxItems: 20,           // <- maximum allowed rendered suggestions
+                    classname: "tags-look", // <- custom classname for this dropdown, so it could be targeted
+                    enabled: 0,             // <- show suggestions on focus
+                    closeOnSelect: false    // <- do not hide the suggestions dropdown once an item has been selected
+                  }
+                });
+
+              input.addEventListener('change', onChange)
+
+              function onChange(tags){
+                var tagsVal = JSON.parse(tags.target.value);
+                var tagsArray = [];
+                  for (let item of tagsVal) {
+                    tagsArray.push(item.value);
+                  }
+                // console.log("Array of tags :" + JSON.stringify(tagsArray));
+                // console.log(Array.isArray(tagsArray));
+
+                var biblio = document.getElementsByClassName("biblio-element");
+                var totalPanel = biblio.length;
+
+                for (var x = 0; x <= totalPanel; x++){
+                  var curBiblio = document.getElementById("biblio" + x);
+                  // console.log(curBiblio);
+                  var curBiblioLabels = curBiblio.getElementsByClassName("label");
+                  // console.log(curBiblioLabels);
+
+                  // create an array of tags based on labels in element
+                  var curBiblioTags = [];
+                  for (let item of curBiblioLabels) {
+                    curBiblioTags.push(item.innerHTML);
+                  }
+                  // console.log(curBiblioTags);
+                  
+                  // if current element got label identicated in tags display it
+                  const display = tagsArray.every(element => {
+                    return curBiblioTags.indexOf(element) !== -1;
+                  });
+
+                  if(display){
+                    $("#biblio" + x ).hide();
+                    $("#biblio" + x ).fadeIn();
+                  } else {
+                    $("#biblio" + x ).hide();
+                  };
+                }
+              }
+            </script>
+        </div>
+    </section>
+
+    <!-- Video Section-->
+    <section class="page-section bg-white text-secondary mb-0" id="about">
+      <div class="container">
+          <!-- About Section Heading-->
+          <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "videos.title" }}</h2>
+          <!-- Icon Divider-->
+          <div class="divider-custom">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="bi bi-camera-reels-fill"></i></div>
+              <div class="divider-custom-line"></div>
+          </div>
+
+          <p class="text-center">{{ $.Param "videos.intro" }}</p>
+
+          <p class="mb-5 text-center">{{ $.Param "videos.citation" | markdownify }}</p>
+
+          <!-- Conferences -->
+          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-person-video3"></i> {{ $.Param "videos.elements.conferences" }}</h3>
+          <div class="row justify-content-center">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/FoCN8vFPMz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/LCZQZMpfAWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/8Lhl6zE30z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/9X4bV9fYkfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/TObfFD_ac8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/tWLkvzxs3s8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/kSVA5Q79Urc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/JjoX0nY38hA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+          </div>
+
+          <!-- Documentaries -->
+          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-play-btn-fill"></i> {{ $.Param "videos.elements.documentaries" }}</h3>
+          <div class="row justify-content-center">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/GZ4izGzj9r0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/7IBG2V98IBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/YQhflH4alO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/VsU5ZG_BPVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+          </div>
+
+          <!-- Film & Series -->
+          <h3 class="mt-3 mb-3 text-center"><i class="bi bi-film"></i> {{ $.Param "videos.elements.films" }}</h3>
+          <div class="row justify-content-center">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/RbIxYm3mKzI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <iframe class="iframe-compo" src="https://www.youtube.com/embed/vLa-HhBpgc4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <!-- Action Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+      <div class="container">
+          <!-- About Section Heading-->
+          <h2 class="page-section-heading text-center text-uppercase">{{ $.Param "actions.title" }}</h2>
+          <!-- Icon Divider-->
+          <div class="divider-custom divider-light">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="bi bi-person-check-fill"></i></div>
+              <div class="divider-custom-line"></div>
+          </div>
+
+          <p class="text-center">{{ $.Param "actions.citation" | markdownify}}</p>
+
+          <!-- Actions -->
+          <div class="card-columns text-primary">
+              {{ range $index, $element := (where .Site.Pages "Type" "action").ByParam "Order" }}
+              <div class="card" style="cursor: pointer;" onclick="window.open('{{ .Params.link }}');">
+                <img class="card-img-top" src="{{ .Params.img }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ .Title }}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{ .Params.Subtitle }}</h6>
+                  <p class="card-text">
+                    {{ .Content }}
+                  </p>
+                </div>
+              </div>
+              {{ end }}
+          </div>
+      </div>
+    </section>
+
+{{ end }}
