@@ -1,0 +1,244 @@
+{{ define "main" }}
+<header>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url(/img/music/carousel/guitar-zoom.jpg); background-size: cover; background-position: center;">
+            <div class="carousel-caption">
+            <h5><a style="text-decoration: none;" href="#guitarCourseSection">{{ $.Param "carousel.carousel1.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel1.subinfo" }}</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(https://cdn-www.avid.com/-/media/avid/images/resource-center/images/2021-01/building-a-home-studio.jpg?h=893&iar=0&mw=1600&w=1600&hash=104AEFC05E8DD4E9B1ED18535E5C5529); background-size: cover; background-position: center;">
+            <div class="carousel-caption">
+            <h5><a style="text-decoration: none;" href="#compositionsSection">{{ $.Param "carousel.carousel2.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel2.subinfo" }}</p>
+            </div>
+        </div>
+        <div class="carousel-item" style="background-image: url(/img/music/carousel/guitar-and-me.jpg); background-size: cover; background-position: center;">
+            <div class="carousel-caption">
+            <h5><a style="text-decoration: none;" href="#aboutSection">{{ $.Param "carousel.carousel3.info" }}</a></h5>
+            <p>{{ $.Param "carousel.carousel3.subinfo" }}</p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+
+
+
+<!-- Guitar Course Section-->
+<section class="page-section portfolio" id="guitarCourseSection"> 
+    <div class="container">
+        <!-- Guitar Course Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{ $.Param "courses.title" }}</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="bi bi-music-note-list"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <p class="text-center">{{ $.Param "courses.intro" | markdownify }}</p>
+        <p class="text-center mb-5">{{ $.Param "courses.disclaimer" | markdownify }}</p>
+
+        
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#beginnerCourse" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    <i class="bi bi-circle-square me-2"></i>
+                    {{ $.Param "courses.levels.beginner" }}
+                </button>
+                </h2>
+                <div id=beginnerCourse class="collapse">
+                    <div class="mb-5"></div>
+                    <!-- Guitar Course Grid Items-->
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "beginnerGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#intermediateCourse" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    <i class="bi bi-book-fill me-2"></i>
+                    {{ $.Param "courses.levels.intermediate" }}
+                </button>
+                </h2>
+                <div id=intermediateCourse class="collapse">
+                <div class="mb-5"></div>
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "intermediateGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="advancedCourseAccordion">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button  btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advancedCourse" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    <i class="bi bi-mortarboard-fill me-2"></i>
+                    {{ $.Param "courses.levels.advanced" }}
+                </button>
+                </h2>
+                <div id=advancedCourse class="collapse">
+                    <div class="mb-5"></div>
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "advancedGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" id="extraCoursesAccordion">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button btn-outline-dark btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#extraCourse" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    <i class="bi bi-plus-circle-fill me-2"></i>
+                    {{ $.Param "courses.levels.extra" }}
+                    </button>
+                </h2>
+                <div id=extraCourse class="collapse">
+                    <div class="mb-5"></div>
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "extraGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compo Chill Wind Section-->
+<section class="page-section bg-primary text-white mb-0" id="compositionsSection">
+    <div class="container">
+
+        <!-- Compo Chill Wind img-->
+        <div class="container" style="width: 15rem; height: 15rem;">
+            <img class="logo-compo" src="{{ .Site.Params.Music.artistImgPath }}" atl="chillwindlogo">
+        </div>
+
+        <!-- Compo Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">{{ .Site.Params.Music.artistName }}</h2>
+        <h4 class="text-uppercase text-center text-white">{{ $.Param "compositions.title" }}</h4>
+
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="bi bi-music-note-beamed"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- Composition iframes-->
+        <div class="row justify-content-center">
+            <!-- Youtube Link - more recent -->
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" src="https://www.youtube.com/embed/8rZ15hzhBBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" src="https://www.youtube.com/embed/y13BWgLOQQY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" src="https://www.youtube.com/embed/9-XYHzxj53s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" src="https://www.youtube.com/embed/utD1AKQdw3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo"  src="https://www.youtube.com/embed/6g2FKzrPau8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" src="https://www.youtube.com/embed/aOXEIzO7zW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" src="https://www.youtube.com/embed/oLOKFzXpgA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- Sound Cloud - before 2017-->
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/301049906&color=%23dfd665&auto_play=true&hide_related=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259233551&color=%23232023&auto_play=true&hide_related=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245907138&color=%236ca4bc&auto_play=true&hide_related=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>                    
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-3">
+                <iframe class="iframe-compo" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/242581590&color=%231a1815&auto_play=true&hide_related=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>                    
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section-->
+<section class="page-section bg-white text-white mb-0" id="aboutSection">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary">{{ $.Param "about.title" }}</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="bi bi-question-lg"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row text-secondary">
+            <div class="col-lg-4 ms-auto">
+                <h4>{{ $.Param "about.experience.title" }}</h4>
+                <p class="lead ">{{ $.Param "about.experience.content1" }}</p>
+                <p class="lead">{{ $.Param "about.experience.content2" }}</p>
+            </div>
+            <div class="col-lg-4 me-auto">
+                <h4>{{ $.Param "about.mao.title" }}</h4>
+                <p class="lead">{{ $.Param "about.mao.content1" }} </p>
+                <p class="lead">{{ $.Param "about.mao.content2" }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+<div id="footer"></div>
+{{ end }}

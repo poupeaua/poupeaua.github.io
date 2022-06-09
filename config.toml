@@ -1,0 +1,48 @@
+baseURL = 'https://alexandrepoupeau.com/'
+languageCode = 'en-us'
+title = 'A. Poupeau'
+copyright = 'Copyright © Alexandre Poupeau Website 2022'
+defaultContentLanguage = 'en'
+publishDir = 'docs'
+staticDir = 'static'
+
+[params]
+copyright = 'Copyright © Alexandre Poupeau Website 2022'
+email = "alexandre.poupeau.contact@gmail.com"
+siteName = 'A. Poupeau'
+city = 'Grenoble, 38000'
+country = 'FRANCE'
+[params.music]
+  artistName = "Chill Wind"
+  artistImgPath = "/img/music/compo/cw-square-white.png"
+[params.navigation]
+  help = 'Help'
+
+[languages]
+  [languages.en]
+    title = 'A. Poupeau Website'
+    url = "/"
+    contentDir = "content/en"
+    languageName = "English"
+    languageShort = "EN"
+    weight = 1
+    [languages.en.params]
+      linkedin = 'https://linkedin.com/whoever'
+  [languages.fr]
+    title = 'A. Poupeau Site Web'
+    contentDir = "content/fr"
+    languageName = "Français"
+    languageShort = "FR"
+    weight = 2
+    [languages.fr.params]
+      linkedin = 'https://linkedin.com/fr/whoever'
+      [languages.fr.params.navigation]
+        help = 'Aide'
+  [languages.es]
+    title = 'A. Poupeau Sitio Web'
+    contentDir = "content/es"
+    languageName = "Español"
+    languageShort = "ES"
+    weight = 3
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
