@@ -65,63 +65,20 @@
                 </button>
                 </h2>
                 <div id=beginnerCourse class="collapse">
-                <div class="mb-5"></div>
-                <!-- Guitar Course Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Guitar Course Item 1-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/beginner/introduction.pdf');">
-                            <div class="image-text">
-                                <img class="img-fluid" src="/img/music/logo/beginner/introduction-logo.png"/>
+                    <div class="mb-5"></div>
+                    <!-- Guitar Course Grid Items-->
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "beginnerGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Guitar Course Item 2-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/beginner/fretboard.pdf');">
-                            <div>
-                                <img class="img-fluid" src="/img/music/logo/beginner/fretboard-logo.png"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 3-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/beginner/intervals.pdf');">
-                            <img class="img-fluid" src="/img/music/logo/beginner/intervals-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 4-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/beginner/triads.pdf');">
-                            <img class="img-fluid" src="/img/music/logo/beginner/triads-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 5-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/beginner/open-chords.pdf');">
-                            <img class="img-fluid" src="/img/music/logo/beginner/openchords-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/beginner/rhythm1.pdf');">
-                            <img class="img-fluid" src="/img/music/logo/beginner/rhythm-one-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto">
-                            <img class="img-fluid" src="/img/music/logo/intermediate/eartrainingaudiation-logo.png"/>
-                        </div>
+                        {{ end }}
                     </div>
                 </div>
-            </div>
 
             </div>
             <div class="accordion-item">
@@ -131,76 +88,20 @@
                     {{ $.Param "courses.levels.intermediate" }}
                 </button>
                 </h2>
-
                 <div id=intermediateCourse class="collapse">
                 <div class="mb-5"></div>
-                <!-- Guitar Course Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Guitar Course Item 1-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/intermediate/bar-chords.pdf');">
-                            <div>
-                                <img class="img-fluid" src="/img/music/logo/intermediate/barchords-logo.png"/>
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "intermediateGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Guitar Course Item 2-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#suspendedchordsCourse">
-                            <div>
-                                <img class="img-fluid" src="/img/music/logo/intermediate/suspendedchords-logo.png"/>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Guitar Course Item 2-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/intermediate/major-scale.pdf');">
-                            <div>
-                                <img class="img-fluid" src="/img/music/logo/intermediate/majorscale-logo.png"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 3-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/intermediate/minor-scale.pdf');">
-                            <img class="img-fluid" src="/img/music/logo/intermediate/minorscale-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 4-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#pentatonicscalesCourse">
-                            <img class="img-fluid" src="/img/music/logo/intermediate/pentatonicscales-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 5-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#embellishmentCourse">
-                            <img class="img-fluid" src="/img/music/logo/intermediate/embellishment-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 1-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#seventhchordsCourse">
-                            <div>
-                                <img class="img-fluid" src="/img/music/logo/advanced/seventhchords-logo.png"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 5-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#rhythmtwoCourse">
-                            <img class="img-fluid" src="/img/music/logo/intermediate/rhythm-two-logo.png"/>
-                        </div>
+                        {{ end }}
                     </div>
                 </div>
-            </div>
             </div>
             <div class="accordion-item" id="advancedCourseAccordion">
                 <h2 class="accordion-header" id="panelsStayOpen-headingThree">
@@ -210,67 +111,19 @@
                 </button>
                 </h2>
                 <div id=advancedCourse class="collapse">
-                <div class="mb-5"></div>
-                <!-- Guitar Course Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Guitar Course Item 4-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#cagedCourse">
-                            <img class="img-fluid" src="/img/music/logo/advanced/caged-logo.png"/>
+                    <div class="mb-5"></div>
+                    <div class="row justify-content-center">
+                        {{ range $index, $element := (where .Site.Pages "Type" "advancedGuitarCourse").ByParam "Order" }}
+                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
+                            </div>
                         </div>
+                        {{ end }}
                     </div>
-
-                    <!-- Guitar Course Item 2-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#secondarydominantsCourse">
-                            <img class="img-fluid" src="/img/music/logo/advanced/secondarydominants-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 5-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/advanced/harmonic-minor-scale.pdf');">
-                            <img class="img-fluid" src="/img/music/logo/advanced/harmonicminorscale-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#modesCourse">
-                            <img class="img-fluid" src="/img/music/logo/advanced/modes-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#modulationCourse">
-                            <img class="img-fluid" src="/img/music/logo/advanced/modulation-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#borrowedchordsCourse">
-                            <img class="img-fluid" src="/img/music/logo/advanced/borrowedchords-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#rhythmthreeCourse">
-                            <img class="img-fluid" src="/img/music/logo/advanced/rhythmthree-logo.png"/>
-                        </div>
-                    </div>
-
-                    <!-- Guitar Course Item 6-->
-                    <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                        <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#modernsongtheory">
-                            <img class="img-fluid" src="/img/music/logo/advanced/modernsongtheory-logo.png"/>
-                        </div>
-                    </div>
-                    
                 </div>
-            </div>
             </div>
             <div class="accordion-item" id="extraCoursesAccordion">
                 <h2 class="accordion-header" id="panelsStayOpen-headingFour">
@@ -281,110 +134,20 @@
                 </h2>
                 <div id=extraCourse class="collapse">
                     <div class="mb-5"></div>
-                    <!-- Guitar Course Grid Items-->
                     <div class="row justify-content-center">
-                        <!-- Guitar Course Item 3-->
+                        {{ range $index, $element := (where .Site.Pages "Type" "extraGuitarCourse").ByParam "Order" }}
                         <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/extra/extsourcesinfo.pdf');">
-                                <img class="img-fluid" src="/img/music/logo/extra/extsourcesinfo-logo.png"/>
+                            <div class="portfolio-item{{ if eq .Params.Active false }}-inactive{{ end }} mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file={{ .Params.Course }}');">
+                                <div class="image-text">
+                                    <img class="img-fluid" src={{ .Params.Logo }} />
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Guitar Course Item 3-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#fingerexoCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/fingerexercises-logo.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 3-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#cadenceCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/cadence-logo.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/chromaticism-logo.png"/>
-                            </div>
-                        </div>
-
-                            <!-- Guitar Course Item 7-->
-                            <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item mx-auto" onclick="window.open('/js/pdfjs/web/viewer.html?file=/music/pdf/extra/melodic-minor-scale.pdf');">
-                                <img class="img-fluid" src="/img/music/logo/extra/melodicminorscale-logo.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/power-chords.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/slash-chords.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/diminished-chords.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/licks.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/fingerstyle.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/extended-chords.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/augmented-chords.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/circle-of-fifths.png"/>
-                            </div>
-                        </div>
-
-                        <!-- Guitar Course Item 7-->
-                        <div class="col-xs-6 col-md-4 col-lg-3 mb-5">
-                            <div class="portfolio-item-inactive mx-auto" data-bs-toggle="modal" data-bs-target="#chromaticismCourse">
-                                <img class="img-fluid" src="/img/music/logo/extra/tritone-substitution.png"/>
-                            </div>
-                        </div>
+                        {{ end }}
                     </div>
                 </div>
-                </div>
             </div>
-        
+        </div>
     </div>
 </section>
 
