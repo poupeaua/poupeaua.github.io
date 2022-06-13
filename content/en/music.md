@@ -27,12 +27,13 @@ courses:
 
 compositions:
     title: Compositions
+    citation: "*\"You listen to the music, the music tells you what to do.\"* - Guthrie Govan"
 
 about:
     title: About
     experience:
         title: Music Experience
-        content1: I have been playing guitar for over 15 years now, I have had the opportunity to play in different     groups, organize concerts and jam.
+        content1: I have been playing guitar for over 15 years now, I have had the opportunity to play in different groups, organize concerts and jam.
         content2: I love to put my patience and motivation into teaching guitar. I teach guitar the way I would have loved to be taught when I first started. I focus on both practice and Music Theory.
     mao:
         title: Electronic Music Creation
