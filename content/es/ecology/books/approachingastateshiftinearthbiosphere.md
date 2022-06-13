@@ -1,5 +1,5 @@
 ---
-Title: Enfoque a un cambio de estado en la biosfera terrestre
+Title: Enfoque sobre un cambio de estado en la biosfera terrestre
 Subtitle: Nature - 2012
 Type: "book"
 Tags: ["cambio climático"]

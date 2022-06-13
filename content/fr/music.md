@@ -27,6 +27,7 @@ courses:
 
 compositions:
     title: Compositions
+    citation: "*\"Ecoute la musique, la musique te dit quoi jouer.\"* - Guthrie Govan"
 
 about:
     title: À propos

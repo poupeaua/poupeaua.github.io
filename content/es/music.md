@@ -25,6 +25,7 @@ courses:
 
 compositions:
     title: Composiciones
+    citation: "*\"Escuchas la música, la música te dice lo que tienes que hacer.\"* - Guthrie Govan"
 
 about:
     title: Más información
@@ -35,6 +36,6 @@ about:
     mao:
         title: Música electrónica
         content1: En 2017, empecé a crear mi propia música electrónica en el ordenador. ¡Fue muy divertido! Tuve la oportunidad de aprender mucho a lo largo de esta aventura sobre MAO como FlStudio o Ableton.
-        content2: De manera teórica, también fue genial aprender sobre nuevos conceptos como la masterización, la mezcla y la composición.
+        content2: De manera teórica, también fue genial aprender sobre nuevos conceptos como la masterización, la mezcla de audio y la composición.
 
 ---
