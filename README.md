@@ -38,3 +38,13 @@ For final tests, generate your local site and test it with :
 ```
 ./hugo_exec.sh
 ```
+
+## Put in Production
+
+1. Simply run the following command on master branch locally :
+
+```
+hugo
+```
+
+2. This will create static content in the docs/ directory. Finally push the code on master. Github action will do its job to expose the static content in the docs/ directory.
