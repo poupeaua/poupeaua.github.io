@@ -68,7 +68,7 @@
 
             <p class="mb-5 text-center">{{ $.Param "biblio.citation" | markdownify }}</p>
 
-            <input name="input-custom-dropdown" class="bg-white rounded text-primary" placeholder="{{ $.Param "biblio.tags.input" }}" value="">
+            <input name="input-custom-dropdown" class="bg-white rounded text-primary w-100" placeholder="{{ $.Param "biblio.tags.input" }}" value="">
 
             <div class="card-columns text-primary">
                 {{ range $index, $element := (where .Site.Pages "Type" "book").ByParam "Order" }}
