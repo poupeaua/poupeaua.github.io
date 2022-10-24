@@ -1,13 +1,12 @@
 baseURL = 'https://alexandrepoupeau.com/'
 languageCode = 'en-us'
-title = 'A. Poupeau'
-copyright = 'Copyright © Alexandre Poupeau Website 2022'
+title = 'Alexandre Poupeau - Website'
 defaultContentLanguage = 'en'
 publishDir = 'docs'
 staticDir = 'static'
 
 [params]
-copyright = 'Copyright © Alexandre Poupeau Website 2022'
+copyright = 'Copyright © Alexandre Poupeau Website 2023'
 email = "alexandre.poupeau.contact@gmail.com"
 siteName = 'A. Poupeau'
 city = 'Grenoble, 38000'
