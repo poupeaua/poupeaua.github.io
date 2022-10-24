@@ -9,7 +9,7 @@ carousel:
 
 timeline:
     title: Línea de tiempo
-    intro: "Las líneas de tiempo son una forma estupenda y fácil de visualizar la época del Antropoceno y sus consecuencias sistémicas a lo largo del tiempo: el calentamiento global, la erradicación de la biodiversidad, las preocupaciones energéticas, el consumo de recursos y mucho más"
+    intro: "Las líneas de tiempo son una forma estupenda y sencilla de visualizar la era del Antropoceno y sus consecuencias sistémicas a lo largo de los años: el calentamiento global, la erradicación de la biodiversidad, las preocupaciones energéticas, el consumo de recursos y mucho más."
     citation: "*\"No heredamos la tierra de nuestros padres; la tomamos prestada de nuestros hijos.*\" - Antoine de Saint-Exupéry"
 
 
