@@ -1,7 +1,7 @@
 ---
 Title: Main
 iLove: "Hola, me gusta"
-listLove: '[ "el Mote con huesillo", "la Cienca de la Computación", "el Arte", "la Magia", "la Música", "la Pintura", "El Pisco Sour" ]'
+listLove: '[ "el Mote con huesillo", "la Ciencia de la Computación", "el Arte", "la Magia", "la Música", "la Pintura", "El Pisco Sour" ]'
 welcome:
     base: "Bienvenido(a)"
     content1: "¡Bienvenido(a)! He creado este sitio web para compartir mi trabajo sobre diferentes asuntos."
