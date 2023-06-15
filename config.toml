@@ -9,8 +9,8 @@ staticDir = 'static'
 copyright = 'Copyright © Alexandre Poupeau Website 2023'
 email = "alexandre.poupeau.contact@gmail.com"
 siteName = 'A. Poupeau'
-city = 'Grenoble, 38000'
-country = 'FRANCE'
+city = 'México City'
+country = 'MEXICO'
 [params.music]
   artistName = "Chill Wind"
   artistImgPath = "/img/music/compo/cw-square-white.png"
