@@ -1,12 +1,12 @@
 ---
-Title: Les Limites de la Terre
-Subtitle: Science - 2015
+Title: Les Limites Planétaires
+Subtitle: Science - 2023
 Type: "book"
 Tags: ["systémique", "déréglement climatique"]
 TagsLanguages: ["anglais"]
-img: /img/ecology/biblio/planetaryboundaries.jpg
+img: /img/ecology/biblio/planetaryboundaries2023.jpg
 hidden: true
-link: "https://www.researchgate.net/publication/270898819_'Planetary_Boundaries_Guiding_Human_Development_on_a_Changing_Planet'#read"
+link: "https://www.science.org/doi/epdf/10.1126/sciadv.adh2458"
 ---
 
-Guider le développement humain sur une planète en mutation.
+La Terre franchi 6 des 9 limites planétaires

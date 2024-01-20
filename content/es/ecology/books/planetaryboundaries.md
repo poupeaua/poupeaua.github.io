@@ -1,12 +1,12 @@
 ---
-Title: Límites del planeta
-Subtitle: Science - 2015
+Title: Límites Planetarios
+Subtitle: Science - 2023
 Type: "book"
 Tags: ["sistémico", "cambio climático"]
 TagsLanguages: ["inglés"]
-img: /img/ecology/biblio/planetaryboundaries.jpg
+img: /img/ecology/biblio/planetaryboundaries2023.jpg
 hidden: true
-link: "https://www.researchgate.net/publication/270898819_'Planetary_Boundaries_Guiding_Human_Development_on_a_Changing_Planet'#read"
+link: "https://www.science.org/doi/epdf/10.1126/sciadv.adh2458"
 ---
 
-Guiar el desarrollo humano en un planeta cambiante
+El planeta cruza seis de los nueve límites planetarios
