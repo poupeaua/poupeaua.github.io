@@ -6,7 +6,7 @@ publishDir = 'docs'
 staticDir = 'static'
 
 [params]
-copyright = 'Copyright © Alexandre Poupeau Website 2023'
+copyright = 'Copyright © Alexandre Poupeau Website 2024'
 email = "alexandre.poupeau.contact@gmail.com"
 siteName = 'A. Poupeau'
 city = 'México City'

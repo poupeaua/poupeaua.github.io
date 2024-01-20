@@ -1,12 +1,12 @@
 ---
-Title: Planet Boundaries
-Subtitle: Science - 2015
+Title: Planetary Boundaries
+Subtitle: Science - 2023
 Type: "book"
 Tags: ["systemic", "climate change"]
 TagsLanguages: ["english"]
-img: /img/ecology/biblio/planetaryboundaries.jpg
+img: /img/ecology/biblio/planetaryboundaries2023.jpg
 hidden: true
-link: "https://www.researchgate.net/publication/270898819_'Planetary_Boundaries_Guiding_Human_Development_on_a_Changing_Planet'#read"
+link: "https://www.science.org/doi/epdf/10.1126/sciadv.adh2458"
 ---
 
-Guiding Human Development on a Changing Planet
+Earth beyond six of nine planetary boundaries
