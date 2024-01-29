@@ -1,8 +1,8 @@
 # Alexandre Poupeau Website
 
 The objective of this website is to share my passions and productions.
-The website is mainly focused on art (magic, music, painting).
-However it is also a way to display other information such as professional info and other (ecology).
+the website is primarily a way to display information about ecology.
+The website is also focused on art, especially magic, music, painting, mathematics and computer science.
 
 ## Sections
 
@@ -10,7 +10,7 @@ This Website is divided into sections :
 
 ### Ecology
 
-The objective here is to display some sources, content and knowledge about THE most important (and really the only thing that matters) in our era : ecology and environmental information.
+The objective here is to display some sources, content and knowledge about THE most important topic (and really the only thing that matters) of our era : ecology and environmental information.
 
 ### Magic
 
