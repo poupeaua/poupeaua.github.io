@@ -48,3 +48,7 @@ hugo
 ```
 
 2. This will create static content in the docs/ directory. Finally push the code on master. Github action will do its job to expose the static content in the docs/ directory.
+
+## Technical Details
+
+hugo version: hugo v0.111.3-5d4eb5154e1fed125ca8e9b5a0315c4180dab192 linux/amd64 BuildDate=2023-03-12T11:40:50Z VendorInfo=gohugoio
