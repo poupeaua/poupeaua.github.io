@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top navbar-shrink" id="mainNav">
     <div class="container">
-        <a class="navbar-brand mr-auto" href="{{ .Lang | relURL }}">{{ .Site.Params.siteName}}</a>
+        <a class="navbar-brand mr-auto" href="{{ relLangURL "/" }}">{{ .Site.Params.siteName}}</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-white text-primary rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             {{ i18n "nav.menu"}}
             <i class="bi bi-list"></i>
