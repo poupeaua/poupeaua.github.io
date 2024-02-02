@@ -1,4 +1,4 @@
-# Alexandre Poupeau Website
+# Personal Website
 
 The objective of this website is to share my passions and productions.
 the website is primarily a way to display information about ecology.
@@ -28,15 +28,16 @@ From time to time I paint, so I wanted to be able to share my paintings with you
 
 The objective in this page is to display information about my job, my resume and other professional related stuff.
 
-## Launch a test server with Hugo locally
+## Test the Hugo website locally
 
 ```
-hugo server -D --baseURL http://localhost:1313/
+make local
 ```  
 
-For final tests, generate your local site and test it with :
+For final tests to verify how it will be rendered in production:
+
 ```
-./hugo_exec.sh
+make preprod
 ```
 
 ## Put in Production
@@ -49,6 +50,9 @@ hugo
 
 2. This will create static content in the docs/ directory. Finally push the code on master. Github action will do its job to expose the static content in the docs/ directory.
 
-## Technical Details
+## Hugo Version
 
-hugo version: hugo v0.111.3-5d4eb5154e1fed125ca8e9b5a0315c4180dab192 linux/amd64 BuildDate=2023-03-12T11:40:50Z VendorInfo=gohugoio
+See all the release of Hugo framework here: https://github.com/gohugoio/hugo/releases
+
+hugo version currently used: 
+hugo v0.122.0-b9a03bd59d5f71a529acb3e33f995e0ef332b3aa linux/amd64 BuildDate=2024-01-26T15:54:24Z VendorInfo=gohugoioj
