@@ -20,20 +20,19 @@ country = 'MEXICO'
 [languages]
   [languages.en]
     title = 'A. Poupeau Website'
-    url = "/"
     contentDir = "content/en"
     languageName = "English"
-    languageShort = "EN"
     weight = 1
     [languages.en.params]
+      languageShort = "EN"
       linkedin = 'https://linkedin.com/whoever'
   [languages.fr]
     title = 'A. Poupeau Site Web'
     contentDir = "content/fr"
     languageName = "Français"
-    languageShort = "FR"
     weight = 2
     [languages.fr.params]
+      languageShort = "FR"
       linkedin = 'https://linkedin.com/fr/whoever'
       [languages.fr.params.navigation]
         help = 'Aide'
@@ -41,7 +40,8 @@ country = 'MEXICO'
     title = 'A. Poupeau Sitio Web'
     contentDir = "content/es"
     languageName = "Español"
-    languageShort = "ES"
     weight = 3
+    [languages.es.params]
+      languageShort = "ES"
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]

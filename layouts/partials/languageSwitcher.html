@@ -13,7 +13,7 @@
     {{ else -}}
     {{ range .Site.Languages -}}
     {{ if ne $.Site.Language.Lang .Lang }}
-    <a rel="dropdown-item post-translation" href="{{ .Lang | relURL }}">{{ .LanguageName }}</a>
+    <a rel="dropdown-item post-translation" href="{{ relLangURL "/" }}">{{ .LanguageName }}</a>
     {{ end -}}
     {{ end -}}
     {{ end -}}

@@ -18,7 +18,7 @@ Puedes ser un pensador, un creador, un instigador, un organizador o un facilitad
 <blockquote>
 <p>
 Muchos de nosotros participamos en este tipo de negación del cambio climático. buscamos un
-una fracción de segundo y luego apartamos la mirada. O miramos pero luego lo convertimos en una broma ("más
+una fracción de segundo y luego apartamos la mirada. O miramos pero luego lo convertimos en una broma ("¡más
 signos del Apocalipsis!"). Lo cual es otra forma de mirar hacia otro lado. <br><br>
 
 O miramos pero nos contamos historias reconfortantes sobre cómo los humanos son inteligentes
