@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>energy on A. Poupeau Website</title>
+    <link>https://alexandrepoupeau.com/tags/energy/</link>
+    <description>Recent content in energy on A. Poupeau Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://alexandrepoupeau.com/tags/energy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dormez tranquilles jusqu&#39;en 2100</title>
+      <link>https://alexandrepoupeau.com/ecology/books/dormeztranquillesjusquen2100/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/ecology/books/dormeztranquillesjusquen2100/</guid>
+      <description>A book har to read in my opinion as it goes in all directions, left and right, with a confusing structure. I would better recommend Jean-Marc Jancovici&amp;rsquo;s conferences (available on Youtube for example): he is clearer orally.</description>
+    </item>
+    <item>
+      <title>Or Noir</title>
+      <link>https://alexandrepoupeau.com/ecology/books/ornoir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/ecology/books/ornoir/</guid>
+      <description>An essay about oil history, from its discovery to its importance in today&amp;rsquo;s civilization in all domains: industrial of course but also military, political and economical.</description>
+    </item>
+  </channel>
+</rss>

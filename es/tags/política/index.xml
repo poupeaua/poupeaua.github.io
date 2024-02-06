@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>política on A. Poupeau Sitio Web</title>
+    <link>https://alexandrepoupeau.com/es/tags/pol%C3%ADtica/</link>
+    <description>Recent content in política on A. Poupeau Sitio Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <atom:link href="https://alexandrepoupeau.com/es/tags/pol%C3%ADtica/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Esto lo cambia todo</title>
+      <link>https://alexandrepoupeau.com/es/ecology/books/thischangeseverything/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/es/ecology/books/thischangeseverything/</guid>
+      <description>Se trata de una lectura imprescindible para comprender las causas y consecuencias sistémicas en el Antropoceno.</description>
+    </item>
+    <item>
+      <title>Gobernar el clima</title>
+      <link>https://alexandrepoupeau.com/es/ecology/books/gouvernerleclimat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/es/ecology/books/gouvernerleclimat/</guid>
+      <description>Este es un gran libro que recorre la historia de todas las conferencias internacionales sobre el cambio climático y muestra cómo y por qué las cosas no han evolucionado.</description>
+    </item>
+    <item>
+      <title>Informes del IPCC</title>
+      <link>https://alexandrepoupeau.com/es/ecology/books/ipcc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/es/ecology/books/ipcc/</guid>
+      <description>La fuente científica más importante y fiable sobre el cambio climático.</description>
+    </item>
+    <item>
+      <title>Mercaderes de la duda</title>
+      <link>https://alexandrepoupeau.com/es/ecology/books/merchantsofdoubt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/es/ecology/books/merchantsofdoubt/</guid>
+      <description>Cómo un puñado de científicos ocultó la verdad sobre cuestiones que van desde el humo del tabaco hasta el calentamiento global.</description>
+    </item>
+    <item>
+      <title>Pensar en el decrecimiento</title>
+      <link>https://alexandrepoupeau.com/es/ecology/books/penserladecroissance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://alexandrepoupeau.com/es/ecology/books/penserladecroissance/</guid>
+      <description>Un libro escrito por diferentes especialistas donde cada uno tiene su propio capítulo. Hay dos libros que siguen a éste. Puede encontrar los enlaces a continuación.</description>
+    </item>
+  </channel>
+</rss>
