@@ -8,6 +8,9 @@
        },
        "contactMe": {
            "other": "Contáctame"
+       },
+       "copiedToClipboard": {
+            "other": "¡Copiado al portapapeles!"
        }
     },
     "nav": {
