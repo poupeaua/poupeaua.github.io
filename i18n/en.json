@@ -8,6 +8,9 @@
        },
        "contactMe": {
            "other": "Contact me"
+       },
+       "copiedToClipboard": {
+            "other": "Copied to clipboard!"
        }
     },
     "nav": {

@@ -8,6 +8,9 @@
        },
        "contactMe": {
            "other": "Contactez-moi"
+       },
+       "copiedToClipboard": {
+            "other": "Copié dans le presse-papier!"
        }
     },
     "nav": {
