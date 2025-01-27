@@ -5,16 +5,16 @@ clean:
 	@echo "Cleaning operation"
 	@echo "------------------"
 	rm .hugo_build.lock || true
-	rm ${HUGO_RELEASE_FILE_WINDOWS} || true
+	rm ${HUGO_RELEASE_FILE_LINUX} || true
 	rm ${HUGO_RELEASE_FILE_MAC} || true
 
-install-windows:
-	@echo "---------------------------------------------------"
-	@echo "Installing Hugo version v${HUGO_VERSION} on Windows"
-	@echo "---------------------------------------------------"
+install-linux:
+	@echo "-------------------------------------------------"
+	@echo "Installing Hugo version v${HUGO_VERSION} on Linux"
+	@echo "-------------------------------------------------"
 	@echo "We suppose you work on ubuntu or debian (for windows use WSL)"
-	wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_RELEASE_FILE_WINDOWS}
-	sudo dpkg -i ${HUGO_RELEASE_FILE_WINDOWS}
+	wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_RELEASE_FILE_LINUX}
+	sudo dpkg -i ${HUGO_RELEASE_FILE_LINUX}
 	dpkg -s hugo
 	which hugo
 	hugo version
