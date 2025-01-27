@@ -5,17 +5,33 @@ clean:
 	@echo "Cleaning operation"
 	@echo "------------------"
 	rm .hugo_build.lock || true
-	rm ${HUGO_DEB_RELEASE_FILE} || true
+	rm ${HUGO_RELEASE_FILE_WINDOWS} || true
+	rm ${HUGO_RELEASE_FILE_MAC} || true
 
-install:
-	@echo "----------------------------------------"
-	@echo "Installing Hugo version v${HUGO_VERSION}"
-	@echo "----------------------------------------"
+install-windows:
+	@echo "---------------------------------------------------"
+	@echo "Installing Hugo version v${HUGO_VERSION} on Windows"
+	@echo "---------------------------------------------------"
 	@echo "We suppose you work on ubuntu or debian (for windows use WSL)"
-	wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DEB_RELEASE_FILE}
-	sudo dpkg -i ${HUGO_DEB_RELEASE_FILE}
+	wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_RELEASE_FILE_WINDOWS}
+	sudo dpkg -i ${HUGO_RELEASE_FILE_WINDOWS}
 	dpkg -s hugo
+	which hugo
 	hugo version
+	@echo "Successfully installed Hugo version ${HUGO_VERSION}!"
+
+install-mac:
+	@echo "-------------------------------------------------"
+	@echo "Installing Hugo version v${HUGO_VERSION} on MacOS"
+	@echo "-------------------------------------------------"
+	@echo "We suppose you work on MAC OS"
+	wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_RELEASE_FILE_MAC}
+	mkdir -p ${HUGO_DOWNLOAD_DIR}
+	tar -xvzf ${HUGO_RELEASE_FILE_MAC} -C ${HUGO_DOWNLOAD_DIR}
+	@echo "TODO Copy and run:"
+	@echo "source .env"
+	@echo "export PATH=\"${HUGO_DOWNLOAD_DIR}:${PATH}\" >> ~/.zshrc"
+	echo "BEWARE: Validate the execution of the executable in MAC security settings"
 	@echo "Successfully installed Hugo version ${HUGO_VERSION}!"
 
 local:
