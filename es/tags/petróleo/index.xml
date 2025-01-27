@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>petróleo on A. Poupeau Sitio Web</title>
+    <title>Petróleo on A. Poupeau Sitio Web</title>
     <link>https://alexandrepoupeau.com/es/tags/petr%C3%B3leo/</link>
-    <description>Recent content in petróleo on A. Poupeau Sitio Web</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Petróleo on A. Poupeau Sitio Web</description>
+    <generator>Hugo</generator>
     <language>es</language>
     <atom:link href="https://alexandrepoupeau.com/es/tags/petr%C3%B3leo/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://alexandrepoupeau.com/es/ecology/books/ornoir/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://alexandrepoupeau.com/es/ecology/books/ornoir/</guid>
-      <description>Un ensayo sobre la historia del petróleo, desde su descubrimiento hasta su importancia en la civilización actual en todos los ámbitos: industrial, por supuesto, pero también militar, político y económico.</description>
+      <description>&lt;p&gt;Un ensayo sobre la historia del petróleo, desde su descubrimiento hasta su importancia en la civilización actual en todos los ámbitos: industrial, por supuesto, pero también militar, político y económico.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

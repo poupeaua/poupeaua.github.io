@@ -631,23 +631,6 @@
                 href="https://alexandrepoupeau.com/ecology/"
                 />
   </url><url>
-    <loc>https://alexandrepoupeau.com/ecology/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://alexandrepoupeau.com/fr/ecology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://alexandrepoupeau.com/es/ecology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://alexandrepoupeau.com/ecology/"
-                />
-  </url><url>
     <loc>https://alexandrepoupeau.com/music/courses/intermediate/6.embellishment/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1364,23 +1347,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://alexandrepoupeau.com/ecology/timeline/2016.01.plasticfish/"
-                />
-  </url><url>
-    <loc>https://alexandrepoupeau.com/music/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://alexandrepoupeau.com/fr/music/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://alexandrepoupeau.com/es/music/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://alexandrepoupeau.com/music/"
                 />
   </url><url>
     <loc>https://alexandrepoupeau.com/music/</loc>

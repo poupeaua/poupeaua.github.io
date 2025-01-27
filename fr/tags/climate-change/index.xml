@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>climate change on A. Poupeau Site Web</title>
+    <title>Climate Change on A. Poupeau Site Web</title>
     <link>https://alexandrepoupeau.com/fr/tags/climate-change/</link>
-    <description>Recent content in climate change on A. Poupeau Site Web</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Climate Change on A. Poupeau Site Web</description>
+    <generator>Hugo</generator>
     <language>fr</language>
     <atom:link href="https://alexandrepoupeau.com/fr/tags/climate-change/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,7 +12,7 @@
       <link>https://alexandrepoupeau.com/fr/ecology/books/unhabitableearth/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://alexandrepoupeau.com/fr/ecology/books/unhabitableearth/</guid>
-      <description>Le livre explore diverses possibilités pour l&amp;rsquo;avenir de la Terre à travers un spectre de fourchettes de températures futures prédites. Wallace-Wells affirme que même en cas d&amp;rsquo;action importante, les effets du changement climatique auront des conséquences catastrophiques dans de multiples domaines.</description>
+      <description>&lt;p&gt;Le livre explore diverses possibilités pour l&amp;rsquo;avenir de la Terre à travers un spectre de fourchettes de températures futures prédites. Wallace-Wells affirme que même en cas d&amp;rsquo;action importante, les effets du changement climatique auront des conséquences catastrophiques dans de multiples domaines.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

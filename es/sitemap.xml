@@ -650,23 +650,6 @@
                 href="https://alexandrepoupeau.com/es/ecology/"
                 />
   </url><url>
-    <loc>https://alexandrepoupeau.com/es/ecology/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://alexandrepoupeau.com/ecology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://alexandrepoupeau.com/fr/ecology/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://alexandrepoupeau.com/es/ecology/"
-                />
-  </url><url>
     <loc>https://alexandrepoupeau.com/es/ecology/books/discoveryglobalwarming/</loc>
     <xhtml:link
                 rel="alternate"
@@ -1519,23 +1502,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://alexandrepoupeau.com/es/music/courses/advanced/5.modulation/"
-                />
-  </url><url>
-    <loc>https://alexandrepoupeau.com/es/music/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://alexandrepoupeau.com/music/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://alexandrepoupeau.com/fr/music/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://alexandrepoupeau.com/es/music/"
                 />
   </url><url>
     <loc>https://alexandrepoupeau.com/es/music/</loc>
