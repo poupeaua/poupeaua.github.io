@@ -1,0 +1,66 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import ProjectCard from "@/components/projectcard";
+
+export default function Projects() {
+  return (
+    <div className="container mx-auto p-4 space-y-8">
+      <Card>
+        <CardHeader>
+          <CardTitle>Professional Projects</CardTitle>
+          <CardDescription>Work contributed to in a professional capacity.</CardDescription>
+        </CardHeader>
+        <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ProjectCard
+            title="Medium Articles"
+            description="A collection of technical articles and insights published on Medium."
+            badges={["Technical Writing", "Software Engineering"]}
+            link="https://medium.com/@your_medium_profile" // Replace with actual link
+          />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Personal Projects</CardTitle>
+          <CardDescription>A selection of my personal endeavors.</CardDescription>
+        </CardHeader>
+        <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <ProjectCard
+            title="Otary"
+            description="Otary — elegant, readable, and powerful image and 2D geometry Python library."
+            badges={["Python", "OpenCV", "Numpy", "Library", "Image Processing", "Geometry"]}
+            image="https://github.com/poupeaua/otary/raw/master/docs/img/logo-withname-bg-transparent.png"
+            link="https://alexandrepoupeau.com/otary/"
+          />
+          <ProjectCard
+            title="AITT"
+            description="Architectural Image Thinking Technology: AI system for image understanding, analysis, and comprehension to assist architects."
+            badges={["Python", "Computer Vision", "OCR", "Deep Learning"]}
+            image=""
+          />
+          <ProjectCard
+            title="Anthropocene Timeline"
+            description="An interactive timeline exploring the Anthropocene epoch and human impact on the planet."
+            badges={["Ecology", "Sustainability", "Educative", "Sensibilization"]}
+            image="https://anthropocenetimeline.com/img/main/art-ipcc-curv.jpeg"
+            link="https://anthropocenetimeline.com/"
+          />
+          <ProjectCard
+            title="Personal Website"
+            description="A personalwebsite to showcase personal projects: magic, music, painting, ecology and art-related work."
+            badges={["Art", "Magic", "Music", "Painting"]}
+            image="https://alexandrepoupeau.com/personal/img/photo-pro.jpeg"
+            link="https://alexandrepoupeau.com/personal/"
+          />
+          <ProjectCard
+            title="Luthier Website"
+            description="A website dedicated to the art of lutherie, showcasing custom-built instruments."
+            badges={["Next.js", "Strapi", "PostgreSQL"]}
+            image="https://lh3.googleusercontent.com/sitesv/AAzXCkdZbVLEQkc_mKW2nkDp5_jAQ1laXSjfNNO7zqHeDEkX-0vEeQy6aMxqkZeyyVhtA3qzEtpegcY67FzqWtaR43yWJW4KRR1_vM1GCNmnRzCLZH5PK6wgbTzA_OJMblz-Lz4Qz_SZfqhY9Nm1fMjXeeNiCaOnI2bQrLvKHpfgLrphUtYsNEFspeCj=w16383"
+            link="https://www.pierrelassauluthier.fr/"
+          />
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
