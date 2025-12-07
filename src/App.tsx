@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Navigation />
-        <main className="flex-grow overflow-auto">
+        <main className="overflow-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

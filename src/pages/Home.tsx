@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Lightbulb, Target, FileText, ExternalLink, ArrowRight, Award, Globe2, MessageSquare } from "lucide-react";
+import { Briefcase, Lightbulb, Target, FileText, ExternalLink, Award, Globe2, MessageSquare } from "lucide-react";
 import { CardInfo, CertificationCard, LanguageCard, RecommendationCard } from '@/components/custom/home';
 
 const year = new Date().getFullYear();

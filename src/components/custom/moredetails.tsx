@@ -29,7 +29,7 @@ export function BookCard({ name, author, image, description, badges, link }: Boo
           </h3>
           <p className="text-sm text-muted-foreground">{author}</p>
         </CardContent>
-        <CardContent className="flex-grow">
+        <CardContent className="">
             <CardDescription>{description}</CardDescription>
             <div className="mt-4 flex flex-wrap gap-2">
             {badges.map((badge, index) => (

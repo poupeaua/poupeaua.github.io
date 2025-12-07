@@ -35,7 +35,7 @@ export default function ProjectCard({ title, description, badges, link, image }:
           )}
         <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
       </CardHeader>
-      <CardContent className="flex-grow">
+      <CardContent className="">
         <CardDescription>{description}</CardDescription>
         <div className="mt-4 flex flex-wrap gap-2">
           {badges.map((badge, index) => (

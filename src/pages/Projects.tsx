@@ -26,17 +26,17 @@ export default function Projects() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <ProjectCard
+            title="AITT"
+            description="Architectural Image Thinking Technology: AI system for image understanding, analysis, and comprehension to assist architects."
+            badges={["Python", "Computer Vision", "OCR", "Deep Learning"]}
+            image=""
+          />
+          <ProjectCard
             title="Otary"
             description="Otary — elegant, readable, and powerful image and 2D geometry Python library."
             badges={["Python", "OpenCV", "Numpy", "Library", "Image Processing", "Geometry"]}
             image="https://github.com/poupeaua/otary/raw/master/docs/img/logo-withname-bg-transparent.png"
             link="https://alexandrepoupeau.com/otary/"
-          />
-          <ProjectCard
-            title="AITT"
-            description="Architectural Image Thinking Technology: AI system for image understanding, analysis, and comprehension to assist architects."
-            badges={["Python", "Computer Vision", "OCR", "Deep Learning"]}
-            image=""
           />
           <ProjectCard
             title="Anthropocene Timeline"
