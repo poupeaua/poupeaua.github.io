@@ -38,7 +38,7 @@ book is dedicated to everyone working toward the good."
             />
             <BookCard
               name="The Pragmatic Programmer"
-              author="David Thomas"
+              author="David Thomas & Andrew Hunt"
               image="/img/books/pragmatic-programmer.jpg"
               link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
               description="A must-read for every software developer, this book offers practical advice and philosophical insights on becoming a better programmer."
