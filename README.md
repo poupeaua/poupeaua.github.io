@@ -1,50 +1,73 @@
-# Personal Website
+# React + TypeScript + Vite
 
-The objective of this website is to share my passions and productions.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Sections
+Currently, two official plugins are available:
 
-This website is divided into different sections :
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- **Ecology**: The objective here is to display some sources, content and knowledge about THE most important topic (and really the only thing that matters) of our era : ecology and environmental information.
-- **Magic**: As a card artist I would like to share content about this unknown but beautiful form of art.
-- **Music**: As a musician, I wanted to share my share my compositions. Plus, as I give guitar courses to students, I wanted them to be able to access material such as courses, exercises, PDFs easily from anywhere with their smartphone and computer devices.
-- **Painting**: From time to time I paint, so I wanted to be able to share my paintings with you.
-- **Pro**: The objective in this page is to display information about my job, my resume and other professional related stuff.
+## React Compiler
 
-## Technical Details
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Local development
+## Expanding the ESLint configuration
 
-1. For quick development and see changes as you code:
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-make local
-```  
 
-2. For final tests to verify how it will be rendered in production:
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-make preprod
-```
-
-3. To test a new Hugo version in an isolated Docker environment to check for eventual breaking changes before updating Hugo for good:
-
-```
-make latest
-```
-
-### CI/CD
-
-You just have to push the code in master. Two Github Actions CI/CD pipelines take care of the rest:
-
-1. A first pipeline installs hugo in the expected version, builds the website and pushes the content of website in the branch called *gh-pages*.
-
-2. A second pipeline executes then based on the automatic push on the *gh-pages*. This one deploys for real the website in production and make it available online.
-
-### Hugo Version
-
-See all the release of Hugo framework here: https://github.com/gohugoio/hugo/releases
-
-hugo version currently used: 
-hugo v0.142.0+extended+withdeploy darwin/arm64 BuildDate=2025-01-22T12:20:52Z VendorInfo=brew
