@@ -23,7 +23,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="container mx-auto p-4 space-y-8">
+    <div className="max-w-6xl container mx-auto p-4 space-y-8">
       <Card>
         <CardHeader>
           <CardTitle>Get in Touch</CardTitle>

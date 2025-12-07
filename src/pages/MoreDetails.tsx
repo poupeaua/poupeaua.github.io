@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BookCard } from "@/components/custom/moredetails";
 
 export default function MoreDetails() {
   return (
-    <div className="container mx-auto p-4 space-y-8">
+    <div className="max-w-6xl container mx-auto p-4 space-y-8">
       <Card>
         <CardHeader>
           <CardTitle>Beyond the Code</CardTitle>
@@ -25,33 +26,24 @@ export default function MoreDetails() {
           <CardDescription>Books that have shaped my thinking and understanding.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div>
-            <h3 className="font-semibold text-lg mb-2">Technology & Engineering</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">Clean Code: A Handbook of Agile Software Craftsmanship</a> by Robert C. Martin <Badge variant="secondary">Software Design</Badge>
-              </li>
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">The Pragmatic Programmer: Your Journey To Mastery</a> by David Thomas and Andrew Hunt <Badge variant="secondary">Best Practices</Badge>
-              </li>
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">Designing Data-Intensive Applications</a> by Martin Kleppmann <Badge variant="secondary">System Design</Badge>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold text-lg mb-2">Philosophy & Personal Growth</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">Meditations</a> by Marcus Aurelius <Badge variant="secondary">Stoicism</Badge>
-              </li>
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">Sapiens: A Brief History of Humankind</a> by Yuval Noah Harari <Badge variant="secondary">History</Badge>
-              </li>
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">Thinking, Fast and Slow</a> by Daniel Kahneman <Badge variant="secondary">Psychology</Badge>
-              </li>
-            </ul>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <BookCard
+              name="Designing Data-Intensive Applications"
+              author="Martin Kleppmann"
+              image="/img/books/designing-data-intensive-applications.jpg"
+              link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
+              description="The big ideas behind reliable, scalable, and maintainable data systems. Technology is a powerful force in our society. This
+book is dedicated to everyone working toward the good."
+              badges={["Data", "Design Pattern", "Best Practices"]}
+            />
+            <BookCard
+              name="The Pragmatic Programmer"
+              author="David Thomas"
+              image="/img/books/pragmatic-programmer.jpg"
+              link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
+              description="A must-read for every software developer, this book offers practical advice and philosophical insights on becoming a better programmer."
+              badges={["Programming", "Best Practices"]}
+            />
           </div>
         </CardContent>
         <CardFooter>
