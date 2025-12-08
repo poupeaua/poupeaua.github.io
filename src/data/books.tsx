@@ -1,0 +1,86 @@
+export const books = [
+  {
+    name: "Designing Data-Intensive Applications",
+    author: "Martin Kleppmann",
+    image: "/img/books/designing-data-intensive-applications.jpg",
+    link: "https://dataintensive.net/",
+    badges: ["Data", "Database", "Architecture", "Design Pattern", "Best Practices"],
+  },
+  {
+    name: "Designing Machine Learning Systems",
+    author: "Chip Huyen",
+    image: "/img/books/designing-machine-learning-systems.jpg",
+    link: "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/",
+    badges: ["Machine Learning", "ML System", "Architecture", "Design Pattern"]
+  },
+  {
+    name: "Clean Code: A Handbook of Agile Software Craftsmanship",
+    author: "Robert C. Martin",
+    image: "/img/books/clean-code.jpg",
+    link: "https://www.deeplearningbook.org/",
+    badges: ["Programming", "Best Practices"],
+  },
+  {
+    name: "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+    author: "Robert C. Martin",
+    image: "/img/books/clean-architecture.jpg",
+    link: "https://www.deeplearningbook.org/",
+    badges: ["Architecture", "Design Pattern", "Best Practices"],
+  },
+  {
+    name: "Data Pipelines Pocket Reference",
+    author: "James Densmore",
+    image: "/img/books/data-pipelines-pocket-reference.jpg",
+    link: "https://www.oreilly.com/library/view/data-pipelines-pocket/9781492087823/",
+    badges: ["Data", "Data Pipeline", "Design Pattern", "Best Practices"],
+  },
+  {
+    name: "Fundamentals of Data Engineering",
+    author: "Joe Reis & Matt Housley",
+    image: "/img/books/fundamentals-of-data-engineering.jpg",
+    link: "https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/",
+    badges: ["Data", "Data Pipeline", "Design Pattern", "Best Practices"],
+  },
+  {
+    name: "Learning Spark",
+    author: "Jules S. Damji, Brooke Wenig, Tathagata Das & Denny Lee",
+    image: "/img/books/learning-spark.jpg",
+    link: "https://www.oreilly.com/library/view/learning-spark-2nd/9781492050032/",
+    badges: ["Big Data", "Framework", "Apache Spark"],
+  },
+  {
+    name: "Building Microservices",
+    author: "Sam Newman",
+    image: "/img/books/building-microservices.jpg",
+    link: "https://www.oreilly.com/library/view/building-microservices-2nd/9781492034018/",
+    badges: ["Design Pattern", "Architecture"],
+  },
+  {
+    name: "The Pragmatic Programmer",
+    author: "David Thomas & Andrew Hunt",
+    image: "/img/books/pragmatic-programmer.jpg",
+    link: "https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052",
+    badges: ["Programming", "Best Practices"],
+  },
+  {
+    name: "Design Patterns: Elements of Reusable Object-Oriented Software",
+    author: "Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides",
+    image: "/img/books/design-patterns.jpg",
+    link: "https://www.oreilly.com/library/view/design-patterns-elements/0201633612/",
+    badges: ["Design Pattern"],
+  },
+  {
+    name: "Practitioners guide to MLOps",
+    author: "Google Cloud",
+    image: "/img/books/mlops-google.jpg",
+    link: "https://services.google.com/fh/files/misc/practitioners_guide_to_mlops_whitepaper.pdf",
+    badges: ["MLOps", "Machine Learning", "DevOps", "Best Practices"],
+  },
+  {
+    name: "Deep Learning",
+    author: "Ian Goodfellow, Yoshua Bengio & Aaron Courville",
+    image: "/img/books/deep-learning.jpg",
+    link: "https://www.deeplearningbook.org/",
+    badges: ["Deep Learning", "Machine Learning", "Mathematics"],
+  }
+];

@@ -1,54 +1,99 @@
+import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookCard } from "@/components/custom/moredetails";
+import { BookDetailsModal } from "@/components/custom/BookDetailsModal";
+import { books } from "@/data/books";
+
+type Book = typeof books[0];
 
 export default function MoreDetails() {
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+
+  const handleBookClick = (book: Book) => {
+    setSelectedBook(book);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedBook(null);
+  };
+
   return (
     <div className="max-w-6xl container mx-auto p-4 space-y-8">
       <Card>
         <CardHeader>
-          <CardTitle>Beyond the Code</CardTitle>
+          <CardTitle className="text-xl">Beyond the Code</CardTitle>
           <CardDescription>A glimpse into my broader interests and philosophies.</CardDescription>
         </CardHeader>
-        <CardContent>
-          <p>
-            This page is dedicated to sharing more about the influences and passions that shape my approach to technology and life in general. I believe that a well-rounded individual brings a richer perspective to problem-solving and innovation. Here, you'll find insights into my continuous learning journey and the resources I find valuable.
+        <CardContent className="text-sm mb-2">
+          <h1 className="text-lg mb-2">Cloud Experience</h1>
+          <p className="text-muted-foreground mb-4">
+            I’ve worked across all three major cloud providers: AWS, GCP, and Azure—each with its own strengths and ecosystem.
           </p>
-          <p className="mt-4">
-            My commitment to lifelong learning extends beyond programming languages and frameworks. I'm deeply interested in understanding the 'why' behind systems, human behavior, and the larger context in which technology operates.
+
+          <h1 className="text-lg mb-2">Continuous Learning</h1>
+          <p className="text-muted-foreground mb-4">
+            I care deeply about learning through platforms like Coursera, but also by building (always better) side projects. Improving my skills is an ongoing journey, and I enjoy exploring new tools, approaches, and ideas.            
+          </p>
+
+          <h1 className="text-lg mb-2">The Importance of Theory</h1>
+          <p className="text-muted-foreground mb-4">
+            Theory matters to me. It helps validate good practices, challenge existing habits, and reveal better ways to design systems, architecture, and code. I love the moment when you discover a new pattern or concept and suddenly everything becomes clearer.
+          </p>
+
+          <h1 className="text-lg mb-2">Engineering Excellence</h1>
+          <p className="text-muted-foreground mb-4">
+            High code quality, automation, DevOps culture, CI/CD, testing, architecture, and documentation are all essential in my work. I strive to get a little better every day so I can deliver cleaner, more reliable, and more maintainable solutions. I consider my job is not only to code but also to ensure the long-term health of the systems I build.
+          </p>
+
+          <h1 className="text-lg mb-2">The Right Tools for the Job</h1>
+          <p className="text-muted-foreground mb-4">
+            My engineering journey taught me that the right tools can save enormous time, increase efficiency, and ultimately lead to better outcomes for clients and teams. Spending some times upfront to evaluate and choose the best tools for a project is always worth it.
+          </p>
+
+          <h1 className="text-lg mb-2">Human-Centered Work</h1>
+          <p className="text-muted-foreground mb-4">
+            A healthy work environment matters. I value positive collaboration, mutual respect, and a culture where people can do their best work.
+          </p>
+
+          <h1 className="text-lg mb-2">Clear Communication</h1>
+          <p className="text-muted-foreground mb-4">
+            I enjoy explaining complex ideas in a simple way—especially to non-technical audiences. Whether through presentations or everyday discussions, I see communication as a core engineering skill.
+          </p>
+
+          <h1 className="text-lg mb-2">Teaching & Pedagogy</h1>
+          <p className="text-muted-foreground">
+            In parallel to working in data, I spent years teaching guitar and card prestidigitation. I bring that same passion for pedagogy into my work by mentoring juniors, sharing knowledge, and organizing dedicated learning sessions. Helping others grow remains one of the most rewarding parts of my job.
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Recommended Books</CardTitle>
-          <CardDescription>Books that have shaped my thinking and understanding.</CardDescription>
+          <CardTitle className="text-xl">Recommended Books</CardTitle>
+          <CardDescription>Books that have shaped my thinking and understanding. Click on a book to see the details. </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <BookCard
-              name="Designing Data-Intensive Applications"
-              author="Martin Kleppmann"
-              image="/img/books/designing-data-intensive-applications.jpg"
-              link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
-              description="The big ideas behind reliable, scalable, and maintainable data systems. Technology is a powerful force in our society. This
-book is dedicated to everyone working toward the good."
-              badges={["Data", "Design Pattern", "Best Practices"]}
-            />
-            <BookCard
-              name="The Pragmatic Programmer"
-              author="David Thomas & Andrew Hunt"
-              image="/img/books/pragmatic-programmer.jpg"
-              link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
-              description="A must-read for every software developer, this book offers practical advice and philosophical insights on becoming a better programmer."
-              badges={["Programming", "Best Practices"]}
-            />
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {books.map((book) => (
+              <BookCard
+                key={book.name}
+                name={book.name}
+                image={book.image}
+                onClick={() => handleBookClick(book)}
+              />
+            ))}
           </div>
         </CardContent>
         <CardFooter>
-          <p className="text-sm text-muted-foreground">These are just a few recommendations. My reading list is ever-growing!</p>
+          <p className="text-sm text-muted-foreground">My reading list is ever-growing!</p>
         </CardFooter>
       </Card>
+
+      <BookDetailsModal
+        isOpen={selectedBook !== null}
+        onClose={handleCloseModal}
+        book={selectedBook}
+      />
     </div>
   );
 }

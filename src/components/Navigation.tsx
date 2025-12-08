@@ -5,12 +5,12 @@ import { buttonVariants } from "@/components/ui/button"
 
 export default function Navigation() {
   return (
-<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" data-testid="header-navigation">
+<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60" data-testid="header-navigation">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
         <NavLink to="/" className="text-lg font-semibold tracking-tight">
           AP.
         </NavLink>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0 sm:gap-1">
           <NavLink
             to="/"
             className={({ isActive }) =>
