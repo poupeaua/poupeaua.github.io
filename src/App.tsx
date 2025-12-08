@@ -6,10 +6,12 @@ import MoreDetails from './pages/MoreDetails';
 import NotFound from './pages/NotFound';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navigation />
         <main className="overflow-auto">
