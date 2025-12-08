@@ -10,7 +10,7 @@ export default function Navigation() {
         <NavLink to="/" className="text-lg font-semibold tracking-tight">
           AP.
         </NavLink>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0 sm:gap-1">
           <NavLink
             to="/"
             className={({ isActive }) =>
