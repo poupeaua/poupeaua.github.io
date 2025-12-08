@@ -6,6 +6,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Copy, Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function Contact() {
   const emailAddress = "alexandre.poupeau.contact@gmail.com"; // Replace with your actual email
@@ -30,32 +32,42 @@ export default function Contact() {
           <CardDescription>I'd love to hear from you!</CardDescription>
         </CardHeader>
         <CardContent className="text-center">
-          <p className="text-lg mb-4">
+          <p className="text-lg mb-6">
             For quick inquiries, you can reach me directly at:
           </p>
-          <TooltipProvider>
-            <Tooltip open={copied || undefined}>
-              <TooltipTrigger asChild>
-                <a
-                  href={`mailto:${emailAddress}`}
-                  onClick={(e) => {
-                    e.preventDefault(); // Prevent mailto link from opening immediately
-                    handleCopy();
-                  }}
-                  className="text-blue-500 hover:underline font-semibold text-xl cursor-pointer"
+              <div className="flex w-full max-w-sm items-center gap-2 mx-auto">
+              <input
+                type="text"
+                readOnly
+                value={emailAddress}
+                className="flex h-10 w-full rounded-md border border-input bg-foreground text-muted dark:bg-accent-foreground dark:text-muted px-3 py-1 shadow-sm transition-colors focus:outline-none focus:ring-1 focus:ring-ring"
+                placeholder="Email"
+                aria-label="Email address"
+              />
+              <TooltipProvider>
+                <Tooltip open={copied || undefined}>
+                <TooltipTrigger asChild>
+                  <button
+                  onClick={handleCopy}
+                  className="inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md border border-input bg-foreground text-muted dark:bg-accent-foreground dark:text-muted px-3 py-2 font-medium ring-offset-background transition-colors hover:bg-accent-foreground/90 hover:dark:bg-accent-foreground/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                   aria-label="Copy email address to clipboard"
-                >
-                  {emailAddress}
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{copied ? "Copied!" : "Click to copy"}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+                  >
+                  {copied ? (
+                    <Check className="w-4 h-4" />
+                  ) : (
+                    <Copy className="w-4 h-4" />
+                  )}
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{copied ? "Copied!" : "Click to copy"}</p>
+                </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              </div>
         </CardContent>
         <CardFooter className="flex justify-center">
-          <p className="text-sm text-muted-foreground">Click the email address to copy it to your clipboard.</p>
+          <p className="text-sm text-muted-foreground">Click the icon to copy the email address to your clipboard.</p>
         </CardFooter>
       </Card>
     </div>
