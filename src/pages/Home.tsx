@@ -140,7 +140,7 @@ export default function Home() {
                     Alexandre is an absolute crack when it comes to Python/SQL, and has also demonstrated me his ability to work with other languages and infrastructures. He has a strong code culture.
                     On a personal basis, Alexandre is an extremely open-minded, proactive and kind person, which makes him the perfect asset for any team or project."
               name="Médéric Thomas"
-              role="Chief Analytics Officer"
+              role="Chief Analytics Officer, BNP Paribas, Mexico City"
             />
           </div>
       </section>
