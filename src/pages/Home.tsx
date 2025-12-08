@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Lightbulb, Target, FileText, ExternalLink, Award, Globe2, MessageSquare } from "lucide-react";
-import { CardInfo, CertificationCard, LanguageCard, RecommendationCard } from '@/components/custom/home';
+import { CardInfo, CertificationCard, ContactCards, LanguageCard, RecommendationCard } from '@/components/custom/home';
+import { LogoWall } from "@/components/custom/logoWall";
 
 const year = new Date().getFullYear();
 const yearExperience = year - 2019; // Assuming experience started in 2015
@@ -16,14 +17,16 @@ export default function Home() {
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6" data-testid="text-title">
           Senior ML Engineer
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-8 leading-relaxed" data-testid="text-bio">
-          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in full-stack development, cloud architecture, and creating elegant solutions that make a difference.
+        <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
+          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in full-stack development, data pipelines, ML solutions, cloud architecture and creating elegant solutions that make a difference.
         </p>
+
+        <ContactCards />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <CardInfo title="Experience" description={`+${yearExperience} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist, Data Engineer and DevOps`} icon={Briefcase} />
-            <CardInfo title="Inspiration" description="I care about excellence to deliver high-quality code and solutions that meet the needs of end-users" icon={Lightbulb} />
-            <CardInfo title="Objective" description="Build data application for good to make underrepresented people’s voices heard, to create opportunities for everyone, and to avert disasters" icon={Target} />
+            <CardInfo title="Inspiration" description="I care about excellence to deliver high-quality code and architecture that meet the needs of end-users" icon={Lightbulb} />
+            <CardInfo title="Objective" description="Build data application for good, make underrepresented people’s voices heard and to create opportunities for everyone" icon={Target} />
           </div>
       </section>
 
@@ -50,6 +53,8 @@ export default function Home() {
           </CardContent>
         </Card>
       </section>
+
+      <LogoWall />
 
       <section className="mb-16 md:mb-20" data-testid="section-certifications">
         <div className="flex items-center gap-3 mb-6">

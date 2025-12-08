@@ -7,7 +7,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Copy, Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export default function Contact() {
   const emailAddress = "alexandre.poupeau.contact@gmail.com"; // Replace with your actual email
