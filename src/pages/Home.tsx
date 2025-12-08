@@ -18,7 +18,7 @@ export default function Home() {
           Senior ML Engineer
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
-          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in full-stack development, data pipelines, ML solutions, cloud architecture and creating elegant solutions that make a difference.
+          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in full-stack development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.
         </p>
 
         <ContactCards />
@@ -61,6 +61,11 @@ export default function Home() {
           <Award className="h-6 w-6 text-muted-foreground" />
           <h2 className="text-2xl md:text-3xl font-semibold" data-testid="text-certifications-heading">Certifications</h2>
         </div>
+
+        <p className='text-muted-foreground mb-4'>
+          Continuous Learning is key in my opinion to stay ahead in the fast-evolving tech landscape.
+        </p>
+
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
           <CertificationCard

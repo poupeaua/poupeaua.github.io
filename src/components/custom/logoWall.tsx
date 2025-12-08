@@ -13,9 +13,10 @@ const technologies = [
   "git",
   "docker",
   "postgresql",
+  "spark",
   "pytorch",
-  "dvc",
-  "sql-server",
+  "Data Version Control",
+  "SQL Server",
   "nginx"
 ];
 
