@@ -42,7 +42,7 @@ export function LogoWall() {
                     <img
                         src={`/svg/${tech}.svg`}
                         alt={tech}
-                        className="h-8 w-auto object-contain transition-transform group-hover:scale-110 opacity-60"
+                        className="h-8 w-auto object-contain transition-transform group-hover:scale-110 opacity-90 dark:opacity-70"
                         loading="lazy"
                     />
                     <span className="text-lg font-medium text-muted-foreground">
