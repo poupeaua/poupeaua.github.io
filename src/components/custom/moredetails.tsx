@@ -1,17 +1,16 @@
 import { ExternalLink } from "lucide-react";
 import { Badge } from "../ui/badge";
-import { Card, CardContent, CardDescription } from "../ui/card";
+import { Card, CardContent } from "../ui/card";
 
 interface BookCardProps {
   name: string;
   author: string;
   image: string;
-  description: string;
   badges: string[];
   link: string;
 }
 
-export function BookCard({ name, author, image, description, badges, link }: BookCardProps) {
+export function BookCard({ name, author, image, badges, link }: BookCardProps) {
   return (
     <a
       href={link}
@@ -30,8 +29,7 @@ export function BookCard({ name, author, image, description, badges, link }: Boo
           <p className="text-sm text-muted-foreground">{author}</p>
         </CardContent>
         <CardContent className="">
-            <CardDescription>{description}</CardDescription>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
             {badges.map((badge, index) => (
                 <Badge key={index} variant="secondary">{badge}</Badge>
             ))}

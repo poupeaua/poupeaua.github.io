@@ -25,14 +25,12 @@ export default function MoreDetails() {
           <CardDescription>Books that have shaped my thinking and understanding.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <BookCard
               name="Designing Data-Intensive Applications"
               author="Martin Kleppmann"
               image="/img/books/designing-data-intensive-applications.jpg"
               link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
-              description="The big ideas behind reliable, scalable, and maintainable data systems. Technology is a powerful force in our society. This
-book is dedicated to everyone working toward the good."
               badges={["Data", "Design Pattern", "Best Practices"]}
             />
             <BookCard
@@ -40,7 +38,6 @@ book is dedicated to everyone working toward the good."
               author="David Thomas & Andrew Hunt"
               image="/img/books/pragmatic-programmer.jpg"
               link="https://www.amazon.com/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052"
-              description="A must-read for every software developer, this book offers practical advice and philosophical insights on becoming a better programmer."
               badges={["Programming", "Best Practices"]}
             />
           </div>
