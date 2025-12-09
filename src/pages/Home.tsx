@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Lightbulb, Target, FileText, ExternalLink, Award, Globe2, MessageSquare } from "lucide-react";
-import { CardInfo, CertificationCard, ContactCards, LanguageCard, RecommendationCard } from '@/components/custom/home';
-import { LogoWall } from "@/components/custom/logoWall";
+import { RecommendationCard } from '@/components/custom/home/RecommendationCard';
+import { SpecificityCard } from '@/components/custom/home/SpecificityCard';
+import { CertificationCard } from '@/components/custom/home/CertificationCard';
+import { LanguageCard } from '@/components/custom/home/LanguageCard';
+import { ContactCards } from "@/components/custom/home/ContactCards";
+import { LogoWall } from "@/components/custom/home/LogoAutoScroll";
 
 const year = new Date().getFullYear();
 const yearExperience = year - 2019; // Assuming experience started in 2015
@@ -24,9 +28,9 @@ export default function Home() {
         <ContactCards />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <CardInfo title="Experience" description={`+${yearExperience} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist, Data Engineer and DevOps`} icon={Briefcase} />
-            <CardInfo title="Inspiration" description="I care about excellence to deliver high-quality code and architecture that meet the needs of end-users" icon={Lightbulb} />
-            <CardInfo title="Objective" description="Build data application for good, make underrepresented people’s voices heard and to create opportunities for everyone" icon={Target} />
+            <SpecificityCard title="Experience" description={`+${yearExperience} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist, Data Engineer and DevOps`} icon={Briefcase} />
+            <SpecificityCard title="Inspiration" description="I care about excellence to deliver high-quality code and architecture that meet the needs of end-users" icon={Lightbulb} />
+            <SpecificityCard title="Objective" description="Build data application for good, make underrepresented people’s voices heard and to create opportunities for everyone" icon={Target} />
           </div>
       </section>
 

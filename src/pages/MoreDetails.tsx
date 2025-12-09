@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookCard } from "@/components/custom/moredetails";
-import { BookDetailsModal } from "@/components/custom/BookDetailsModal";
+import { BookCard } from "@/components/custom/moredetails/BookCard";
+import { BookDetailsModal } from "@/components/custom/moredetails/BookDetailsModal";
 import { books } from "@/data/books";
 
 type Book = typeof books[0];
