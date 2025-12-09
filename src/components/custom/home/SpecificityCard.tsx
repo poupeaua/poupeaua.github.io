@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 
-
 export function SpecificityCard({ title, description, icon: Icon }: { title: string; description: string; icon: React.ComponentType<any>; }) {
   return (
     <Card className="hover-elevate" data-testid={`card-${title.toLowerCase()}`}>

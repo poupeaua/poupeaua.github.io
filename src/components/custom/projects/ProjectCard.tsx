@@ -2,7 +2,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
-
 interface ProjectCardProps {
   title: string;
   description: string;
