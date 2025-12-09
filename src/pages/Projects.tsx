@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import ProjectCard from "@/components/custom/projectcard";
+import ProjectCard from "@/components/custom/projects/ProjectCard";
 
 export default function Projects() {
   return (

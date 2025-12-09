@@ -1,4 +1,3 @@
-
 // see {name}.svg in public/svg for the logos
 const technologies = [
   "Google Cloud Platform",
