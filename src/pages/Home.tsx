@@ -108,7 +108,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-semibold" data-testid="text-languages-heading">Languages</h2>
         </div>
         <p className='text-muted-foreground mb-4'>
-          With academic and professional experience in Chile and Mexico, I am a partner of choice for projects requiring precise multilingual communication.
+          With academic and professional experience in Chile and Mexico, I am a partner of choice for projects requiring precise multilingual communication, particularly those involving Latin America.
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
