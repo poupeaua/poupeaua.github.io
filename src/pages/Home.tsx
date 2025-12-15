@@ -9,17 +9,20 @@ import { ContactCards } from "@/components/custom/home/ContactCards";
 import { LogoWall } from "@/components/custom/home/LogoAutoScroll";
 
 const year = new Date().getFullYear();
-const yearExperience = year - 2019; // Assuming experience started in 2015
+const yearExperience = year - 2019; // Assuming professional experience started in 2019
+const jobTitle = "Senior ML Engineer";
 
 export default function Home() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <title>Alexandre Poupeau - Professional Portfolio</title>
+      <meta name="description" content={`Welcome to the portfolio of Alexandre Poupeau. Explore my projects, certifications, and professional experience as a ${jobTitle}.`} />
       <section className="mb-8 md:mb-8" data-testid="section-about">
         <p className='text-muted-foreground mb-1'>
           Hello, I'm Alexandre Poupeau
         </p>
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6" data-testid="text-title">
-          Senior ML Engineer
+          {jobTitle}
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
           A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in full-stack development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.

@@ -21,6 +21,8 @@ export default function MoreDetails() {
 
   return (
     <div className="max-w-6xl container mx-auto p-4 space-y-8">
+      <title>More Details - Alexandre Poupeau</title>
+      <meta name="description" content="A deeper look into the philosophies, interests, and recommended books that shape my work and life." />
 
       <section className="mb-8 md:mb-10" data-testid="section-beyond-the-code">
         <Card>
