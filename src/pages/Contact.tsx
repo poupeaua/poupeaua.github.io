@@ -25,6 +25,8 @@ export default function Contact() {
 
   return (
     <div className="max-w-6xl container mx-auto p-4 space-y-8">
+      <title>Contact - Alexandre Poupeau</title>
+      <meta name="description" content="Get in touch with me. Find my email address and connect for any questions or collaborations." />
       <Card>
         <CardHeader>
           <CardTitle>Get in Touch</CardTitle>

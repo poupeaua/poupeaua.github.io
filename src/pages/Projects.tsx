@@ -4,6 +4,8 @@ import ProjectCard from "@/components/custom/projects/ProjectCard";
 export default function Projects() {
   return (
     <div className="max-w-6xl container mx-auto p-4 space-y-8">
+      <title>Projects - Alexandre Poupeau</title>
+      <meta name="description" content="Discover my professional and side projects, showcasing my skills in software engineering, machine learning, and more." />
       <Card>
         <CardHeader>
           <CardTitle>Professional Projects</CardTitle>
