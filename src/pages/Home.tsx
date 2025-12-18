@@ -25,7 +25,7 @@ export default function Home() {
           {jobTitle}
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
-          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in full-stack development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.
+          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in backend development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.
         </p>
 
         <ContactCards />
