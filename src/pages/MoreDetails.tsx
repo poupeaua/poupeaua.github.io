@@ -31,9 +31,29 @@ export default function MoreDetails() {
             <CardDescription>A glimpse into my broader interests and philosophies.</CardDescription>
           </CardHeader>
           <CardContent className="text-sm mb-2">
+            <h1 className="text-lg mb-2">Human-Centered Work</h1>
+            <p className="text-muted-foreground mb-4">
+              A healthy work environment matters. I value positive collaboration, mutual respect, and a culture where people can do their best work.
+            </p>
+
+            <h1 className="text-lg mb-2">Team Work</h1>
+            <p className="text-muted-foreground mb-4">
+              Big and meaningful accomplishments come from collaborating with talented, specialized people, and it’s in the process of bringing those minds together that the true magic happens.
+            </p>
+
+            <h1 className="text-lg mb-2">Clear Communication</h1>
+            <p className="text-muted-foreground mb-4">
+              I enjoy explaining complex ideas in a simple way, especially to non-technical audiences. Whether through presentations or everyday discussions, I see communication as a core engineering soft skill.
+            </p>
+
+            <h1 className="text-lg mb-2">Teaching & Pedagogy</h1>
+            <p className="text-muted-foreground mb-4">
+              In parallel to working in data, I spent years teaching guitar and card prestidigitation. I bring that same passion for pedagogy into my work by mentoring juniors, sharing knowledge, and organizing dedicated learning sessions. Helping others grow remains one of the most rewarding parts of my job.
+            </p>
+
             <h1 className="text-lg mb-2">Cloud Experience</h1>
             <p className="text-muted-foreground mb-4">
-              I’ve worked across all three major cloud providers: AWS, GCP, and Azure—each with its own strengths and ecosystem.
+              I’ve worked across all three major cloud providers: AWS, GCP, and Azure. They are here to stay. They offer mature, reliable solutions that allow teams to deploy systems to production faster while improving scalability and reliability. Working with cloud platforms has become an essential part of how I design and deliver production-ready systems.
             </p>
 
             <h1 className="text-lg mb-2">Continuous Learning</h1>
@@ -52,23 +72,8 @@ export default function MoreDetails() {
             </p>
 
             <h1 className="text-lg mb-2">The Right Tools for the Job</h1>
-            <p className="text-muted-foreground mb-4">
-              My engineering journey taught me that the right tools can save enormous time, increase efficiency, and ultimately lead to better outcomes for clients and teams. Spending some times upfront to evaluate and choose the best tools for a project is always worth it.
-            </p>
-
-            <h1 className="text-lg mb-2">Human-Centered Work</h1>
-            <p className="text-muted-foreground mb-4">
-              A healthy work environment matters. I value positive collaboration, mutual respect, and a culture where people can do their best work.
-            </p>
-
-            <h1 className="text-lg mb-2">Clear Communication</h1>
-            <p className="text-muted-foreground mb-4">
-              I enjoy explaining complex ideas in a simple way—especially to non-technical audiences. Whether through presentations or everyday discussions, I see communication as a core engineering skill.
-            </p>
-
-            <h1 className="text-lg mb-2">Teaching & Pedagogy</h1>
             <p className="text-muted-foreground">
-              In parallel to working in data, I spent years teaching guitar and card prestidigitation. I bring that same passion for pedagogy into my work by mentoring juniors, sharing knowledge, and organizing dedicated learning sessions. Helping others grow remains one of the most rewarding parts of my job.
+              My engineering journey taught me that the right tools can save enormous time, increase efficiency, and ultimately lead to better outcomes for clients and teams. Spending some times upfront to evaluate and choose the best tools for a project is always worth it.
             </p>
           </CardContent>
         </Card>
