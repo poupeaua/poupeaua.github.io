@@ -7,14 +7,14 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Copy, Check } from 'lucide-react';
+import { EMAIL } from '@/data/constants';
 
 export default function Contact() {
-  const emailAddress = "alexandre.poupeau.contact@gmail.com"; // Replace with your actual email
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(emailAddress);
+      await navigator.clipboard.writeText(EMAIL);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000); // Reset "Copied!" message after 2 seconds
     } catch (err) {
@@ -40,7 +40,7 @@ export default function Contact() {
               <input
                 type="text"
                 readOnly
-                value={emailAddress}
+                value={EMAIL}
                 className="flex h-10 w-full rounded-md border border-input bg-foreground text-muted dark:bg-accent-foreground dark:text-muted px-3 py-1 shadow-sm transition-colors focus:outline-none focus:ring-1 focus:ring-ring"
                 placeholder="Email"
                 aria-label="Email address"

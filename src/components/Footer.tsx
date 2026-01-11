@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { YEAR } from "@/data/constants";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
   const location = useLocation();
 
   return (
@@ -21,7 +21,7 @@ export default function Footer() {
         </section>
       )}
 
-      <p className="text-muted-foreground mt-6">Copyright &copy; {currentYear}, Alexandre Poupeau. All rights reserved.</p>
+      <p className="text-muted-foreground mt-6">Copyright &copy; {YEAR}, Alexandre Poupeau. All rights reserved.</p>
     </footer>
   );
 }
