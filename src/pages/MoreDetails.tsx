@@ -31,13 +31,9 @@ export default function MoreDetails() {
             <CardDescription>A glimpse into my broader interests and philosophies.</CardDescription>
           </CardHeader>
           <CardContent className="text-sm mb-2">
-            <h1 className="text-lg mb-2">Human-Centered Work</h1>
+            <h1 className="text-lg mb-2">Human-Centered & Team Work</h1>
             <p className="text-muted-foreground mb-4">
-              A healthy work environment matters. I value positive collaboration, mutual respect, and a culture where people can do their best work.
-            </p>
-
-            <h1 className="text-lg mb-2">Team Work</h1>
-            <p className="text-muted-foreground mb-4">
+              I value positive collaboration, mutual respect, and a culture where people can do their best work. 
               Big and meaningful accomplishments come from collaborating with talented, specialized people, and it’s in the process of bringing those minds together that the true magic happens.
             </p>
 

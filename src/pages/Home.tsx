@@ -7,22 +7,20 @@ import { CertificationCard } from '@/components/custom/home/CertificationCard';
 import { LanguageCard } from '@/components/custom/home/LanguageCard';
 import { ContactCards } from "@/components/custom/home/ContactCards";
 import { LogoWall } from "@/components/custom/home/LogoAutoScroll";
+import { JOB_TITLE, YEAR_EXPERIENCE } from "@/data/constants";
 
-const year = new Date().getFullYear();
-const yearExperience = year - 2019; // Assuming professional experience started in 2019
-const jobTitle = "Senior ML Engineer";
 
 export default function Home() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <title>Alexandre Poupeau - Professional Portfolio</title>
-      <meta name="description" content={`Welcome to the portfolio of Alexandre Poupeau. Explore my projects, certifications, and professional experience as a ${jobTitle}.`} />
+      <meta name="description" content={`Welcome to the portfolio of Alexandre Poupeau. Explore my projects, certifications, and professional experience as a ${JOB_TITLE}.`} />
       <section className="mb-8 md:mb-8" data-testid="section-about">
         <p className='text-muted-foreground mb-1'>
           Hello, I'm Alexandre Poupeau
         </p>
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6" data-testid="text-title">
-          {jobTitle}
+          {JOB_TITLE}
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
           A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in backend development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.
@@ -31,7 +29,7 @@ export default function Home() {
         <ContactCards />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <SpecificityCard title="Experience" description={`+${yearExperience} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist, Data Engineer and DevOps`} icon={Briefcase} />
+            <SpecificityCard title="Experience" description={`+${YEAR_EXPERIENCE} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist and Data Engineer`} icon={Briefcase} />
             <SpecificityCard title="Inspiration" description="I care about excellence to deliver high-quality code and architecture that meet the needs of end-users" icon={Lightbulb} />
             <SpecificityCard title="Objective" description="Build data application for good and contribute to building a more sustainable future for the planet." icon={Target} />
           </div>

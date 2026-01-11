@@ -1,15 +1,13 @@
 
 
-export const EMAIL = "alexandre.poupeau.contact@gmail.com";
-export const linkedin = "https://www.linkedin.com/in/alexandre-poupeau-67a893133/";
-export const github = "https://github.com/poupeaua";
+import { EMAIL, LINKEDIN_URL, GITHUB_URL } from '@/data/constants';
 
 export function ContactCards() {
   return (
     <div className="flex justify-start gap-3 mb-10">
       <a
         target="_blank"
-        href={github}
+        href={GITHUB_URL}
         aria-label="GitHub"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center"
@@ -25,7 +23,7 @@ export function ContactCards() {
       </a>
       <a
         target="_blank"
-        href={linkedin}
+        href={LINKEDIN_URL}
         aria-label="LinkedIn"
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center"
