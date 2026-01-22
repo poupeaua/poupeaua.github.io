@@ -21,7 +21,7 @@ export default function Footer() {
         </section>
       )}
 
-      <p className="text-muted-foreground mt-6">Copyright &copy; {YEAR}, Alexandre Poupeau. All rights reserved.</p>
+      <p className="text-muted-foreground mt-6">Copyright &copy; {YEAR}, Alexandre Poupeau EI - Entreprise Individuelle. All rights reserved.</p>
     </footer>
   );
 }
