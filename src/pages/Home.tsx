@@ -7,7 +7,7 @@ import { CertificationCard } from '@/components/custom/home/CertificationCard';
 import { LanguageCard } from '@/components/custom/home/LanguageCard';
 import { ContactCards } from "@/components/custom/home/ContactCards";
 import { LogoWall } from "@/components/custom/home/LogoAutoScroll";
-import { JOB_TITLE, YEAR_EXPERIENCE } from "@/data/constants";
+import { JOB_TITLE, YEAR_EXPERIENCE, RESUME_URL } from "@/data/constants";
 
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
               </div>
             </div>
             <Button asChild data-testid="button-view-resume">
-              <a href="https://drive.google.com/file/d/1Foy_KVGZDvq-AqtthCi7_XAWY5llBvAA/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="gap-2">
+              <a href={`${RESUME_URL}`} target="_blank" rel="noopener noreferrer" className="gap-2">
                 View Resume
                 <ExternalLink className="h-4 w-4" />
               </a>
