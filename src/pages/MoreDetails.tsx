@@ -69,8 +69,8 @@ export default function MoreDetails() {
 
             <h1 className="text-lg mb-2">DevOps Culture</h1>
             <p className="text-muted-foreground mb-4">
-              I care deeply about DevOps culture and consider it a core part of my role, not an add-on. In my work, I strive to apply key principles such as isolated execution, focus on automation, infrastructure as code, zero-downtime deployments and desired-state management.
-              More importantly, I believe DevOps is fundamentally a team mindset. It’s not an individual responsibility, but a collective one that must be shared and embraced across the organization. I actively seek to promote and spread this culture within the teams I work with.
+              I care deeply about DevOps culture and consider it a core part of my role. In my work, I strive to apply key principles such as isolated execution, focus on automation, infrastructure as code, zero-downtime deployments and desired-state management.
+              More importantly, I believe DevOps is fundamentally a team mindset. It’s not an individual responsibility, but a collective one that must be embraced across the organization. I actively seek to promote this culture within the teams I work with.
             </p>
 
             <h1 className="text-lg mb-2">The Right Tools for the Job</h1>
