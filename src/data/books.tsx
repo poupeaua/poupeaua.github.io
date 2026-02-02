@@ -17,14 +17,14 @@ export const books = [
     name: "Clean Code: A Handbook of Agile Software Craftsmanship",
     author: "Robert C. Martin",
     image: "/img/books/clean-code.jpg",
-    link: "https://www.deeplearningbook.org/",
+    link: "https://www.oreilly.com/library/view/clean-code-a/9780136083238/",
     badges: ["Programming", "Best Practices"],
   },
   {
     name: "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
     author: "Robert C. Martin",
     image: "/img/books/clean-architecture.jpg",
-    link: "https://www.deeplearningbook.org/",
+    link: "https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/",
     badges: ["Architecture", "Design Pattern", "Best Practices"],
   },
   {

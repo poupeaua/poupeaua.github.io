@@ -15,6 +15,7 @@ const technologies = [
   "spark",
   "PyTorch",
   "Data Version Control",
+  "MLFlow",
   "SQL Server",
   "nginx"
 ];

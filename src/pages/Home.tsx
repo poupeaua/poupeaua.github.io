@@ -30,7 +30,7 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <SpecificityCard title="Experience" description={`+${YEAR_EXPERIENCE} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist and Data Engineer`} icon={Briefcase} />
-            <SpecificityCard title="Inspiration" description="I care about excellence to deliver high-quality code and architecture that meet the needs of end-users" icon={Lightbulb} />
+            <SpecificityCard title="Inspiration" description="I care about excellence to deliver high-quality code and architecture that meet the needs of end-users through a strong DevOps culture." icon={Lightbulb} />
             <SpecificityCard title="Objective" description="Build data application for good and contribute to building a more sustainable future for the planet." icon={Target} />
           </div>
       </section>
