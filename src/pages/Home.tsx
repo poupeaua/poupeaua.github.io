@@ -100,6 +100,13 @@ export default function Home() {
             image="/img/certifications/deeplearningai-sequence-models.png"
             link="https://drive.google.com/file/d/10jz92JbeZ1g-06X1tmqDyFcihnUveGmE/view"
           />
+
+          <CertificationCard
+            name="Machine Learning in Production"
+            issuer="DeepLearning.AI"
+            image="/img/certifications/deeplearningai-machine-learning-in-production.jpeg"
+            link="https://drive.google.com/file/d/1NwBeGkM77OPukQTv2gPJQ-1pILawSUgD/view"
+          />
         </div>
       </section>
       
