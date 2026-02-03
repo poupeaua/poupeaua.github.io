@@ -164,6 +164,16 @@ export default function Home() {
               name="Médéric Thomas"
               role="Chief Analytics Officer, BNP Paribas, Mexico City"
             />
+
+            <RecommendationCard
+              content="I was fortunate to have Alexandre Poupeau as my mentor, and his impact on my technical profile was immediate. 
+                    What I value most about his approach as a Senior Data Scientist is his undeniable commitment to best practices in software development and clean code. 
+                    He taught me that a model is only as good as the architecture that supports it, always pushing me to apply the right methodologies to ensure scalability and technical rigor. 
+                    In addition to being a brilliant individual, his high level of seniority is reflected in his ability to foster the growth of those around him, both in the field of Data Science and in technical collaboration. 
+                    He is a benchmark of excellence and an exceptional mentor that any data team would aspire to have."
+              name="Edgar Rebolledo"
+              role="Data Scientist, BNP Paribas, Mexico City"
+            />
           </div>
       </section>
     </div>
