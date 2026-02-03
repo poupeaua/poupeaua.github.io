@@ -100,6 +100,13 @@ export default function Home() {
             image="/img/certifications/deeplearningai-sequence-models.png"
             link="https://drive.google.com/file/d/10jz92JbeZ1g-06X1tmqDyFcihnUveGmE/view"
           />
+
+          <CertificationCard
+            name="Machine Learning in Production"
+            issuer="DeepLearning.AI"
+            image="/img/certifications/deeplearningai-machine-learning-in-production.jpeg"
+            link="https://drive.google.com/file/d/1NwBeGkM77OPukQTv2gPJQ-1pILawSUgD/view"
+          />
         </div>
       </section>
       
@@ -156,6 +163,16 @@ export default function Home() {
                     On a personal basis, Alexandre is an extremely open-minded, proactive and kind person, which makes him the perfect asset for any team or project."
               name="Médéric Thomas"
               role="Chief Analytics Officer, BNP Paribas, Mexico City"
+            />
+
+            <RecommendationCard
+              content="I was fortunate to have Alexandre Poupeau as my mentor, and his impact on my technical profile was immediate. 
+                    What I value most about his approach as a Senior Data Scientist is his undeniable commitment to best practices in software development and clean code. 
+                    He taught me that a model is only as good as the architecture that supports it, always pushing me to apply the right methodologies to ensure scalability and technical rigor. 
+                    In addition to being a brilliant individual, his high level of seniority is reflected in his ability to foster the growth of those around him, both in the field of Data Science and in technical collaboration. 
+                    He is a benchmark of excellence and an exceptional mentor that any data team would aspire to have."
+              name="Edgar Rebolledo"
+              role="Data Scientist, BNP Paribas, Mexico City"
             />
           </div>
       </section>
