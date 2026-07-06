@@ -17,3 +17,4 @@ It is divided into 3 sections:
 - Uses [React](https://reactjs.org/)
 - Uses [TailwindCSS](https://tailwindcss.com/)
 - For UI [Shadcn](https://ui.shadcn.com/)
+- Icons [Lucide](https://lucide.dev/) and [SVGRepo](https://www.svgrepo.com/)

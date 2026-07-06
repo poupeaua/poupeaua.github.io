@@ -7,6 +7,7 @@ import { CertificationCard } from '@/components/custom/home/CertificationCard';
 import { LanguageCard } from '@/components/custom/home/LanguageCard';
 import { ContactCards } from "@/components/custom/home/ContactCards";
 import { LogoWall } from "@/components/custom/home/LogoAutoScroll";
+import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 import { JOB_TITLE, YEAR_EXPERIENCE, RESUME_URL } from "@/data/constants";
 
 
@@ -16,17 +17,29 @@ export default function Home() {
       <title>Alexandre Poupeau - Professional Portfolio</title>
       <meta name="description" content={`Welcome to the portfolio of Alexandre Poupeau. Explore my projects, certifications, and professional experience as a ${JOB_TITLE}.`} />
       <section className="mb-8 md:mb-8" data-testid="section-about">
-        <p className='text-muted-foreground mb-1'>
-          Hello, I'm Alexandre Poupeau
-        </p>
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6" data-testid="text-title">
-          {JOB_TITLE}
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
-          A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in backend development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.
-        </p>
+        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+          <div className="flex-1">
+            <p className='text-muted-foreground mb-1'>
+              Hello, I'm Alexandre Poupeau
+            </p>
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6" data-testid="text-title">
+              {JOB_TITLE}
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mb-4 leading-relaxed" data-testid="text-bio">
+              A passionate engineer with expertise in building reliable, scalable and maintainable data & AI applications. I specialize in backend development, data pipelines, ML systems, Python expertise, cloud architecture and creating elegant solutions that make a difference.
+            </p>
 
-        <ContactCards />
+            <ContactCards />
+          </div>
+
+          <div className="flex justify-center md:justify-end mb-6">
+            <img
+              src="/img/photo-pro.jpeg"
+              alt="Alexandre Poupeau"
+              className="rounded-tl-[2rem] rounded-br-[2rem] rounded-tr-[0.75rem] rounded-bl-[0.75rem] object-cover shadow-lg ring-1 ring-border md:h-64 md:w-64"
+            />
+          </div>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <SpecificityCard title="Experience" description={`+${YEAR_EXPERIENCE} years of professional experience in data and AI projects as a T-shaped engineer, at the frontier between Data Scientist and Data Engineer`} icon={Briefcase} />
@@ -35,33 +48,38 @@ export default function Home() {
           </div>
       </section>
 
-      <section className="mb-16 md:mb-20" data-testid="section-resume">
-        <Card className="bg-card hover-elevate" data-testid="card-resume">
-          <CardContent className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="rounded-md bg-primary/10 p-3">
-                <FileText className="h-6 w-6 text-primary" />
+      <FadeInOnScroll delay={100}>
+        <section className="mb-16 md:mb-20 hidden sm:block" data-testid="section-resume">
+          <Card className="bg-card hover-elevate" data-testid="card-resume">
+            <CardContent className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="rounded-md bg-primary/10 p-3">
+                  <FileText className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-semibold" data-testid="text-resume-title">Resume</h2>
+                  <p className="text-sm text-muted-foreground" data-testid="text-resume-description">
+                    View my professional experience and qualifications
+                  </p>
+                </div>
               </div>
-              <div>
-                <h2 className="text-xl font-semibold" data-testid="text-resume-title">Resume</h2>
-                <p className="text-sm text-muted-foreground" data-testid="text-resume-description">
-                  View my professional experience and qualifications
-                </p>
-              </div>
-            </div>
-            <Button asChild data-testid="button-view-resume">
-              <a href={`${RESUME_URL}`} target="_blank" rel="noopener noreferrer" className="gap-2">
-                View Resume
-                <ExternalLink className="h-4 w-4" />
-              </a>
-            </Button>
-          </CardContent>
-        </Card>
-      </section>
+              <Button asChild data-testid="button-view-resume" className="inline-flex">
+                <a href={`${RESUME_URL}`} target="_blank" rel="noopener noreferrer" className="gap-2">
+                  View Resume
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
+      </FadeInOnScroll>
 
-      <LogoWall />
+      <FadeInOnScroll delay={100}>
+        <LogoWall />
+      </FadeInOnScroll>
 
-      <section className="mb-16 md:mb-20" data-testid="section-certifications">
+      <FadeInOnScroll delay={150}>
+        <section className="mb-16 md:mb-20" data-testid="section-certifications">
         <div className="flex items-center gap-3 mb-6">
           <Award className="h-6 w-6 text-muted-foreground" />
           <h2 className="text-2xl md:text-3xl font-semibold" data-testid="text-certifications-heading">Certifications</h2>
@@ -110,7 +128,10 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="mb-16 md:mb-20" data-testid="section-languages">
+      </FadeInOnScroll>
+
+      <FadeInOnScroll delay={150}>
+        <section className="mb-16 md:mb-20" data-testid="section-languages">
         <div className="flex items-center gap-3 mb-6">
           <Globe2 className="h-6 w-6 text-muted-foreground" />
           <h2 className="text-2xl md:text-3xl font-semibold" data-testid="text-languages-heading">Languages</h2>
@@ -150,7 +171,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-16 md:mb-20" data-testid="section-testimonials">
+      </FadeInOnScroll>
+
+      <FadeInOnScroll delay={150}>
+        <section className="mb-16 md:mb-20" data-testid="section-testimonials">
         <div className="flex items-center gap-3 mb-6">
           <MessageSquare className="h-6 w-6 text-muted-foreground" />
           <h2 className="text-2xl md:text-3xl font-semibold" data-testid="text-testimonials-heading">Recommendations</h2>
@@ -174,8 +198,26 @@ export default function Home() {
               name="Edgar Rebolledo"
               role="Data Scientist, BNP Paribas, Mexico City"
             />
+
+            <RecommendationCard
+              content="
+                    We worked with Alexandre on a very strategic aspect of the UZ.IP platform, around data engineering, AI & scalability. 
+
+                    He showed great skills during this project, especially around:
+
+                    - organization: Alexandre set a complete project workspace up, including a detailed plan of the various tracks he was about to follow, the expected outcomes and a detailed timeline of the initiative. Progresses were constantly monitored and communicated, in an understandable and transparent way, which led to the project success in the initial timeline.
+                    - technical expertise: he has strong technical expertise, on various subjects: Python, AI, data engineering, DevOps, private clouds. It was a key asset for us as one of the main tasks for this collaboration was to improve the scalability of one of our core data components, being a success in the end.
+                    - business acumen: Alexandre went the extra-mile in gaining a true and deep understanding of our business, our market and our customers' needs. It was not easy as the domain we operate in is very specific (and complex) but in the end it led to a better framed solution.
+                    - future proofness: everything that he designed has been done while keeping the focus on evolution, flexibility and reusability. This was key for us to ensure that our teams would be able to take over on what Alexandre implemented.
+                    - involvement & flexibility: the collaboration with Alexandre was very smooth as he showed a great sense of reactivity, availability and flexibility. This was highly appreciated.
+
+                    Overall we are very satisfied with the collaboration we had on this project. Alexandre is a true professional, and his skills were a true asset for our company!"
+              name="Louis Stockreisser"
+              role="Tech Lead Software Engineer & Co-Founder, UZ.IP, Lyon"
+            />
           </div>
       </section>
+      </FadeInOnScroll>
     </div>
   );
 }

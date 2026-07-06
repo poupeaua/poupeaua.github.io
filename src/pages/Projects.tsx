@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ProjectCard from "@/components/custom/projects/ProjectCard";
+import FreelanceCard from "@/components/custom/projects/FreelanceCard";
 
 export default function Projects() {
   return (
@@ -8,15 +9,27 @@ export default function Projects() {
       <meta name="description" content="Discover my professional and side projects, showcasing my skills in software engineering, machine learning, and more." />
       <Card>
         <CardHeader>
-          <CardTitle>Professional Projects</CardTitle>
-          <CardDescription>Work contributed to in a professional capacity.</CardDescription>
+          <CardTitle>Freelance Projects</CardTitle>
+          <CardDescription>Work contributed as a Freelancer.</CardDescription>
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <ProjectCard
-            title="Freelance projects incoming soon"
-            description="I have just started freelancing and will update this section with my projects soon. In the meantime, feel free to see my resume."
-            badges={[]}
-            link="" // Replace with actual link
+          <FreelanceCard
+            title="UZ.IP"
+            jobTitle="AI & Data Architect"
+            datetime="March - May 2026"
+            description="Auditing and optimizing a data pipeline on Azure with business related to trademarks infringement. Enhanced considerably the data pipeline in several aspects and changed the user-experience. Made them save millions of euros long term."
+            badges={["Python", "GenAI", "LLM", "OCR", "Data Architecture", "Data Pipeline", "Azure", "Azure AI Foundry"]}
+            image="/img/projects/uz.ip.png"
+            link="https://www.linkedin.com/in/alexandre-poupeau-67a893133/"
+          />
+          <FreelanceCard
+            title="EDF"
+            jobTitle="AI Engineer"
+            datetime="June 2026"
+            description="Auditing AI in EDF and helping then to use AI efficiently mainly for their developers. I helped them to understand how to use AI in their daily work, the pro and cons, the risks and how to integrate it in their development process."
+            badges={["Audit", "GenAI", "LLM", "AI Strategy", "AI Gouvernance", "Consulting"]}
+            image="/img/projects/edf.png"
+            link="https://www.linkedin.com/in/alexandre-poupeau-67a893133/"
           />
         </CardContent>
       </Card>
