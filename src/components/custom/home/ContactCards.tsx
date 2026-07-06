@@ -1,6 +1,8 @@
 
 
-import { EMAIL, LINKEDIN_URL, GITHUB_URL } from '@/data/constants';
+import { Button } from '@/components/ui/button';
+import { EMAIL, LINKEDIN_URL, GITHUB_URL, RESUME_URL } from '@/data/constants';
+import { ExternalLink, FileText } from 'lucide-react';
 
 export function ContactCards() {
   return (
@@ -54,6 +56,13 @@ export function ContactCards() {
           <path d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64" />
         </svg>
       </a>
+      <Button asChild data-testid="button-view-resume" className="bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200 sm:hidden">
+        <a href={`${RESUME_URL}`} target="_blank" rel="noopener noreferrer" className="gap-2">
+          <FileText />
+          View Resume
+          <ExternalLink className="h-4 w-4" />
+        </a>
+      </Button>
     </div>
   );
 }
