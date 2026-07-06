@@ -24,7 +24,7 @@ export default function ProjectCard({ title, description, badges, link, image }:
               <img src={image} alt={title} className="w-full h-full object-cover rounded-md" />
             </div>
           )}
-        {link && <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />}
+        {link && <ExternalLink className="h-4 w-4 text-muted-foreground shrink-0 opacity-100" />}
       </CardHeader>
       <CardContent className="">
         <CardDescription>{description}</CardDescription>
